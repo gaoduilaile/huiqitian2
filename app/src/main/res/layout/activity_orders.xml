@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_back" />
+
+    <!-- 显示布局选择-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal">
+        <!-- 全部-->
+        <RelativeLayout
+            android:id="@+id/rl_orders_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_orders_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/map_search_content_all"
+                android:textColor="@drawable/tv_map_keywords"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_orders_all"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_e51c23" />
+
+        </RelativeLayout>
+        <!-- 待付款-->
+        <RelativeLayout
+            android:id="@+id/rl_wait_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_wait_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/my_menu_one"
+                android:textColor="@drawable/tv_map_keywords"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_wait_pay"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_e51c23" />
+        </RelativeLayout>
+        <!-- 待发货-->
+        <RelativeLayout
+            android:id="@+id/rl_wait_send_goods"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_wait_send_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/my_menu_two"
+                android:textColor="@drawable/tv_map_keywords"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_wait_send_goods"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_e51c23" />
+        </RelativeLayout>
+        <!-- 待收货-->
+        <RelativeLayout
+            android:id="@+id/rl_wait_get_good"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_wait_get_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/my_menu_three"
+                android:textColor="@drawable/tv_map_keywords"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_wait_get_good"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_e51c23" />
+        </RelativeLayout>
+        <!-- 待评价-->
+        <RelativeLayout
+            android:id="@+id/rl_wait_evaluation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_wait_evaluation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/my_menu_four"
+                android:textColor="@drawable/tv_map_keywords"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/view_wait_evaluation"
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@color/color_e51c23" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_dddddd" />
+
+    <!-- 布局选择下边的线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f5f5f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_orders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/color_f5f5f5"
+            android:dividerHeight="10dp" />
+
+        <LinearLayout
+            android:id="@+id/fl_orders_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/huiqitian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/no_data_now"
+                android:textColor="@color/color_999999"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

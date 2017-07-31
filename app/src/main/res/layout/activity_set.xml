@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- 设置页面顶部标题-->
+    <include layout="@layout/layout_title_back" />
+
+    <!-- 消息推送设置-->
+    <RelativeLayout
+        android:id="@+id/rl_push_set"
+        style="@style/layout_person_msg">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/set_push" />
+
+        <TextView style="@style/text_right_show" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 清除缓存-->
+    <RelativeLayout
+        android:id="@+id/rl_clear_cache"
+        style="@style/layout_person_msg">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/set_clear_cache" />
+
+        <TextView style="@style/text_right_show" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 非wifi情况下手动下载图片-->
+    <RelativeLayout
+        android:id="@+id/rl_wifi_load_pic"
+        style="@style/layout_person_msg">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/set_wifi_load_pic" />
+
+        <yunju.com.huiqitian.vm.widget.MyToggleButton
+            android:id="@+id/iv_btn_select"
+            android:layout_width="30dp"
+            android:layout_height="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            toggle:isDefaultOn="true" />
+    </RelativeLayout>
+
+    <!-- 中间显示-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f5f5f5" />
+
+    <!-- 关于惠七天-->
+    <RelativeLayout
+        android:id="@+id/rl_about_huiqitian"
+        style="@style/layout_person_msg">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/set_about_huiqitian" />
+
+        <TextView
+            android:id="@+id/tv_show_version"
+            style="@style/text_right_show"
+            android:text="V1.0.0" />
+    </RelativeLayout>
+
+    <!-- 退出当前账号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_exist_account"
+            android:layout_width="193dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_exist_account"
+            android:gravity="center"
+            android:text="@string/set_exist_account"
+            android:textColor="@color/tv_exist_account"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

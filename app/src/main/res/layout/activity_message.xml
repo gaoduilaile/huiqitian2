@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_btn"
+    android:orientation="vertical">
+
+    <!--头部标题-->
+    <include
+        android:id="@+id/title_message"
+        layout="@layout/layout_title_back" />
+
+    <!--系统消息-->
+    <RelativeLayout
+        android:id="@+id/rl_system_message"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:background="@drawable/bg_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/img_system_message"
+            style="@style/img_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@mipmap/img_system_message" />
+
+        <TextView
+            android:id="@+id/tv_title_system_message"
+            style="@style/text_title_message"
+            android:layout_toRightOf="@+id/img_system_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/tv_title_system_message" />
+
+        <TextView
+            android:id="@+id/tv_system_message"
+            style="@style/text_message"
+            android:layout_below="@+id/tv_title_system_message"
+            android:layout_toRightOf="@+id/img_system_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="" />
+    </RelativeLayout>
+
+    <!--线-->
+    <View
+        android:id="@+id/one_line_message"
+        style="@style/view_line_message"
+        android:layout_below="@id/img_system_message" />
+
+    <!--商家已接单-->
+    <RelativeLayout
+        android:id="@+id/rl_merchant_message"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:background="@drawable/bg_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/img_merchant_message"
+            style="@style/img_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@mipmap/img_merchant_message" />
+
+        <TextView
+            android:id="@+id/tv_title_merchant_message"
+            style="@style/text_title_message"
+            android:layout_toRightOf="@+id/img_merchant_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/tv_title_merchant_message" />
+
+        <TextView
+            android:id="@+id/tv_merchant_message"
+            style="@style/text_message"
+            android:layout_below="@+id/tv_title_merchant_message"
+            android:layout_toRightOf="@+id/img_merchant_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="" />
+    </RelativeLayout>
+
+    <!--线-->
+    <View
+        android:id="@+id/two_line_message"
+        style="@style/view_line_message"
+        android:layout_below="@id/img_merchant_message" />
+
+    <!--活动消息-->
+    <RelativeLayout
+        android:id="@+id/rl_exercise_message"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:background="@drawable/bg_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/img_exercise_message"
+            style="@style/img_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@mipmap/img_system_message" />
+
+        <TextView
+            android:id="@+id/tv_title_exercise_message"
+            style="@style/text_title_message"
+            android:layout_toRightOf="@+id/img_exercise_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/tv_title_exercise_message" />
+
+        <TextView
+            android:id="@+id/tv_exercise_message"
+            style="@style/text_message"
+            android:layout_below="@+id/tv_title_exercise_message"
+            android:layout_toRightOf="@+id/img_exercise_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="" />
+    </RelativeLayout>
+
+    <!--线-->
+    <View
+        android:id="@+id/three_line_message"
+        style="@style/view_line_message"
+        android:layout_below="@id/img_exercise_message" />
+
+    <!--配送消息-->
+    <RelativeLayout
+        android:id="@+id/rl_delivery_message"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:background="@drawable/bg_selector"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/img_delivery_message"
+            style="@style/img_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:src="@mipmap/img_delivery_message" />
+
+        <TextView
+            android:id="@+id/tv_title_delivery_message"
+            style="@style/text_title_message"
+            android:layout_toRightOf="@+id/img_delivery_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/tv_title_delivery_message" />
+
+        <TextView
+            android:id="@+id/tv_delivery_message"
+            style="@style/text_message"
+            android:layout_below="@+id/tv_title_delivery_message"
+            android:layout_toRightOf="@+id/img_delivery_message"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

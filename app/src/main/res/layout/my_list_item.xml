@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="77dp"
+    android:background="@color/color_f8f8f8"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- 商品图片-->
+    <ImageView
+        android:id="@+id/iv_my_list_good"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="14sp" />
+
+    <!--商品介绍-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <!-- 商品文字介绍-->
+        <TextView
+            android:id="@+id/tv_my_list_good_details"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_333333"
+            android:textSize="12sp" />
+
+        <!-- 商品总金额及数量-->
+        <RelativeLayout
+            android:id="@+id/rl_my_list_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <!-- 商品金额-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥" />
+
+                <TextView
+                    android:id="@+id/tv_my_list_good_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- 商品数量-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_my_list_good_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

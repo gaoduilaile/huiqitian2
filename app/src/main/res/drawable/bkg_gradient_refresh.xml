@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+    <gradient
+        android:startColor="#FFFFFF"
+        android:endColor="#DDDDDD"
+        android:angle="270" />
+
+    <!--　　使用方法：android:background="@drawable/shape_background_grey"
+
+其中 android:angle="270"  代表方向， 270表示从上到下，180表示从右到左，默认从左 -->
+
+</shape>

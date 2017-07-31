@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?><!--搜索结果页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_stuff_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/image_back" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_stuff_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/title_eight"
+            android:textColor="@color/color_title_text"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/et_stuff_search"
+            android:background="@drawable/bg_selector">
+
+            <ImageView
+                android:id="@+id/iv_stuff_cart"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="14dp"
+                android:src="@mipmap/img_find_result_cart"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/iv_stuff_cart"
+                android:background="@drawable/bkg_count"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="99"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/color_title_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 销量-->
+        <LinearLayout
+            android:id="@+id/ly_stuff_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_stuff_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:text="@string/str_find_stuff_num"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_stuff_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_red_down" />
+        </LinearLayout>
+
+        <!-- 配送-->
+        <LinearLayout
+            android:id="@+id/ly_stuff_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_stuff_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_find_stuff_send"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_stuff_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_default_up" />
+        </LinearLayout>
+
+        <!--评价 -->
+        <LinearLayout
+            android:id="@+id/ly_stuff_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_stuff_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_find_stuff_evaluate"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_stuff_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_default_up" />
+        </LinearLayout>
+
+        <!-- 起送-->
+        <LinearLayout
+            android:id="@+id/ly_stuff_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_stuff_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_find_stuff_s_send"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_stuff_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_default_up" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_title_line" />
+
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:id="@+id/pull_refresh_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <yunju.com.huiqitian.vm.widget.MyGridView
+                    android:id="@+id/pv_stuff_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_f5f5f5"
+                    android:divider="@color/tagCloud"
+                    android:dividerHeight="@dimen/x1"
+                    android:horizontalSpacing="@dimen/dimen_3"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/dimen_3" />
+
+                <LinearLayout
+                    android:id="@+id/tv_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/huiqitian" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/no_data_now"
+
+                        android:textColor="@color/color_999999"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+
+</LinearLayout>

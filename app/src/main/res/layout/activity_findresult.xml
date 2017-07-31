@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?><!--搜索结果页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical">
+
+
+        <LinearLayout
+            android:id="@+id/iv_result_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_selector"
+            android:focusable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@mipmap/image_back" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_result_search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@drawable/bkg_et_reg"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/color_title_text"
+            android:textSize="14dp" />
+
+        <!-- <RelativeLayout
+             android:id="@+id/relativeLayout"
+             android:layout_width="wrap_content"
+             android:layout_height="32dp"
+             android:layout_centerVertical="true"
+             android:layout_toEndOf="@+id/et_result_search">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_result_cart"-->
+        <!--android:layout_width="23dp"-->
+        <!--android:layout_height="22dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginRight="14dp"-->
+        <!--android:src="@mipmap/img_find_result_cart" />-->
+        <LinearLayout
+            android:id="@+id/iv_result_cart"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_selector"
+            android:focusable="true"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:src="@mipmap/img_find_result_cart" />
+
+        </LinearLayout>
+        <!--<TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/iv_result_cart"
+            android:background="@drawable/bkg_count"
+            android:gravity="center"
+            android:text="99"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_9"
+            android:visibility="visible" />
+    </RelativeLayout>-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/color_title_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 销量-->
+        <LinearLayout
+            android:id="@+id/ly_result_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:text="@string/str_find_result_num"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_red_down" />
+        </LinearLayout>
+
+        <!-- 配送-->
+        <LinearLayout
+            android:id="@+id/ly_result_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_find_result_send"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_default_down" />
+        </LinearLayout>
+
+        <!--评价 -->
+        <LinearLayout
+            android:id="@+id/ly_result_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_find_result_evaluate"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_default_down" />
+        </LinearLayout>
+
+        <!-- 起送-->
+        <LinearLayout
+            android:id="@+id/ly_result_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/str_find_result_s_send"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/img_find_default_down" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_title_line" />
+
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:id="@+id/pull_refresh_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head" />
+
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <yunju.com.huiqitian.vm.widget.MyGridView
+                android:id="@+id/pv_find_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_f5f5f5"
+                android:divider="@color/tagCloud"
+                android:dividerHeight="@dimen/x1"
+                android:horizontalSpacing="@dimen/dimen_3"
+                android:numColumns="2"
+                android:verticalSpacing="@dimen/dimen_3" />
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+</LinearLayout>

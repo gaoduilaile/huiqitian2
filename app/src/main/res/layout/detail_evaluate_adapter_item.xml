@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="10dp">
+
+
+    <!--用户头像-->
+    <ImageView
+        android:id="@+id/iv_person_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tcv_evaluation_normalTag_details"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/icon_head" />
+    <!--用户昵称-->
+    <TextView
+        android:id="@+id/tv_nike_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tcv_evaluation_normalTag_details"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/iv_person_head"
+        android:textColor="@color/text_popular"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!--级别-->
+    <TextView
+        android:id="@+id/tv_evalLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_toRightOf="@+id/tv_nike_name"
+        android:layout_marginTop="15dp"
+        android:textSize="16sp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"/>
+    <!--用户对商品的评价-->
+    <TextView
+        android:id="@+id/tv_evaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nike_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@color/color_999999"
+        android:textSize="14sp" />
+    <!--用户评论所上传的图片-->
+    <yunju.com.huiqitian.vm.widget.MyGridView
+        android:id="@+id/gv_gridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_evaluation"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:layout_marginBottom="8dp"
+        android:numColumns="5" />
+
+    <!--评价时间-->
+    <TextView
+        android:id="@+id/tv_evaluate_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_999999"
+        android:layout_below="@+id/gv_gridView"/>
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_good_num"-->
+        <!--android:layout_below="@+id/gv_gridView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/y12"-->
+        <!--android:layout_marginTop="13dp"-->
+        <!--android:gravity="center_vertical">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="23dp"-->
+            <!--android:layout_height="@dimen/y12"-->
+            <!--android:layout_marginRight="6dp"-->
+            <!--android:layout_toLeftOf="@+id/tv_good_num"-->
+            <!--android:src="@mipmap/diaznan" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_good_num"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="56dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="99999"-->
+            <!--android:textColor="#999999"-->
+            <!--android:textSize="14dp" />-->
+
+    <!--</RelativeLayout>-->
+
+
+</RelativeLayout>

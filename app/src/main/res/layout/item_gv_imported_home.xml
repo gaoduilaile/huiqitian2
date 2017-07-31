@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="179dp"
+    android:layout_height="92dp"
+    android:background="@android:color/white">
+        <!--商品名称-->
+        <TextView
+            android:id="@+id/tv_name_imported"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="10dp"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:textColor="@color/color_title_text"/>
+
+        <!--￥-->
+        <TextView
+            android:id="@+id/tv_sign_imported"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name_imported"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/str_find_result_dollar"
+            android:textSize="10sp"
+            android:textColor="@color/btn_getMessage_register"
+            android:textStyle="bold"/>
+        <!--价格-->
+        <TextView
+            android:id="@+id/tv_price_imported"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name_imported"
+            android:layout_toRightOf="@+id/tv_sign_imported"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/btn_getMessage_register"
+            android:textStyle="bold"/>
+
+        <!--图片-->
+        <ImageView
+            android:id="@+id/img_goods_imported"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="6dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitCenter"/>
+
+</RelativeLayout>

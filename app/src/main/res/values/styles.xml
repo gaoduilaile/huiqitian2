@@ -1,0 +1,413 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <declare-styleable name="TagCloudView">
+        <attr name="tcvBackground" format="reference" />
+        <attr name="tcvSeclecTextColor" format="reference" />
+        <attr name="tcvTextColor" format="color" />
+        <attr name="tcvBorder" format="dimension" />
+        <attr name="tcvTextSize" format="dimension" />
+        <attr name="tcvBorderItem" format="dimension" />
+        <attr name="tcvItemBorderVertical" format="dimension" />
+        <attr name="tcvItemBorderHorizontal" format="dimension" />
+        <attr name="tcvSingleLine" format="boolean" />
+        <attr name="tcvShowEndText" format="boolean" />
+        <attr name="tcvShowRightImg" format="boolean" />
+        <attr name="tcvEndText" format="string" />
+        <attr name="tcvRightResId" format="reference" />
+        <attr name="tcvCanTagClick" format="boolean" />
+        <attr name="tcvTagResId" format="reference" />
+    </declare-styleable>
+
+    <!-- 个人中心-->
+    <style name="text_my_menu">
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:layout_marginRight">@dimen/x30</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 我的订单 style-->
+    <style name="my_dingdan_item_rl">
+        <item name="android:focusable">true</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:padding">@dimen/dimen_1</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <style name="my_dingdan_item_tv_image">
+        <item name="android:focusable">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">@dimen/dimen_1</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginTop">@dimen/y1</item>
+        <item name="android:drawablePadding">@dimen/dimen_1</item>
+        <item name="android:layout_marginBottom">10dp</item>
+
+    </style>
+
+    <style name="my_dingdan_item_imageview">
+        <item name="android:focusable">false</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginTop">11dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+    </style>
+
+
+    <style name="my_dingdan_item_tv_top">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:background">@drawable/bg_oval</item>
+        <item name="android:focusable">false</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimen_10</item>
+        <item name="android:padding">@dimen/dimen_1</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">@color/color_f63469</item>
+    </style>
+
+
+    <style name="text_my_show_count">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_my_show_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+    </style>
+    <!-- 个人中心的代金卷-->
+    <style name="layout_my_money">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="text_my_money">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:drawablePadding">14dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+    </style>
+
+    <style name="img_my_money">
+        <item name="android:layout_height">14dp</item>
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+    </style>
+
+    <!-- 地图相关-->
+    <style name="text_address">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+
+    <!--系统消息-->
+    <style name="img_message">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+    </style>
+
+    <style name="text_title_message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_popular</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginTop">26dp</item>
+    </style>
+
+    <style name="text_message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginTop">@dimen/y2</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/et_phone_register</item>
+    </style>
+
+    <style name="view_line_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen_1</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:background">@color/color_menu_btm_line</item>
+    </style>
+
+    <!-- 个人信息页面-->
+
+    <!-- 个人信息页面中的相对布局-->
+    <style name="layout_person_msg">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- 个人信息页面中的左边Text文本显示提示-->
+    <style name="text_left_show">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!-- 个人信息页面中的左边Text文本显示提示-->
+    <style name="text_right_show">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:drawableRight">@mipmap/icon_my_right</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:layout_marginBottom">13dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+    <!-- 手机解绑TextView提示-->
+    <style name="text_prompt_show">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_marginLeft">28dp</item>
+        <item name="android:layout_marginRight">28dp</item>
+    </style>
+
+    <!-- 所有的View线-->
+    <style name="view_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen_1</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:background">@color/color_dddddd</item>
+    </style>
+
+    <!-- popwindow相关-->
+    <style name="anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <!-- text文字属性-->
+    <style name="text_attr_color_999999">
+
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <!-- 主界面的每日精选-->
+    <style name="text_home_name">
+        <item name="android:maxEms">6</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_home_money">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_e51c23</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_home_money_icon">
+        <item name="android:text">@string/str_find_result_dollar</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/color_e51c23</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_attr_color_999999_no_left">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
+
+    <style name="text_attr_color_333333">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/color_333333</item>
+    </style>
+
+    <!-- 订单配送的linerlayout-->
+    <style name="ll_all">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">67dp</item>
+    </style>
+
+    <!-- 订单配送的详细的linerlayout-->
+    <style name="ll_order_msg">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>
+
+    <!--添加地址style-->
+    <!-- 添加地址布局项-->
+    <style name="layout_address_item">
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">43dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <!-- 右边文字显示-->
+    <style name="text_address_item">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!-- 左边显示-->
+    <style name="edit_address_item">
+        <item name="android:layout_marginLeft">90dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:textColorHint">@color/color_999999</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!--签到界面-->
+    <!--三角图标-->
+    <style name="iv_sign_in">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">13dp</item>
+        <item name="android:src">@mipmap/img_sign_in</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+    <!--签到所加天数-->
+    <style name="tv_data_sign_in">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_cccccc</item>
+    </style>
+    <!--签到时间-->
+    <style name="tv_time_sign_in">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11dp</item>
+        <item name="android:textColor">@color/et_phone_register</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+
+
+    <style name="TitleBar">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/dialog_button_text_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/base_title_bar_height</item>
+    </style>
+    <!-- 这里设立windowBackground的背景后就不用在xml里再设置了 -->
+    <style name="MyDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/common_alert_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ui_parent_Wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="cityLocatingProgressStyle">
+        <item name="android:maxWidth">16.0dip</item>
+        <item name="android:maxHeight">24.0dip</item>
+        <item name="android:indeterminateDrawable">@anim/city_locating_anim</item>
+        <item name="android:minWidth">16.0dip</item>
+        <item name="android:minHeight">24.0dip</item>
+    </style>
+
+    <style name="city_hot_header" parent="@style/ui_parent_Wrap">
+        <item name="android:textSize">@dimen/city_list_text_size</item>
+        <item name="android:textColor">@color/city_item_letter_color</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+</resources>

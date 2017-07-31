@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!--&lt;!&ndash; 商品图片&ndash;&gt;-->
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_my_list_good_pic"-->
+        <!--android:layout_width="@dimen/x51"-->
+        <!--android:layout_height="@dimen/y36"-->
+        <!--android:layout_marginLeft="14dp"-->
+        <!--android:background="@mipmap/ic_launcher" />-->
+
+    <!--&lt;!&ndash;商品介绍&ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/y38"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="35dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--&lt;!&ndash; 商品文字介绍&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_my_list_good_details_discr"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称"-->
+            <!--android:textColor="@color/color_333333"-->
+            <!--android:textSize="12dp" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--顶部返回标题-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_title_back"
+    android:layout_height="54dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/color_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:focusable="true"
+            android:background="@drawable/bg_selector"
+            android:id="@+id/iv_title_back"
+            android:layout_width="56dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_width="23dp"
+                android:layout_height="27dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/image_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/layout_title_back"
+            android:textColor="@color/color_title_text"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_title_share"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:focusable="false"
+                android:id="@+id/iv_title_share"
+                android:layout_alignParentRight="true"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="gone" />
+            <!-- 用来显示文字-->
+            <TextView
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:text="内容"
+                android:background="@drawable/bg_selector"
+                android:id="@+id/tv_title_share"
+                android:textSize="16dp"
+                android:textColor="@color/color_999999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/line_title_back"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_title_line" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

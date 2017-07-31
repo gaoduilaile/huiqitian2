@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white">
+
+    <!--代金券商品图片-->
+    <ImageView
+        android:id="@+id/img_voucher_goods"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"/>
+    <!--代金券商品名称-->
+    <TextView
+        android:id="@+id/tv_voucher_goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_voucher_goods"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
+    <!--代金券商品超市名称-->
+    <TextView
+        android:id="@+id/tv_voucher_goods_market_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_voucher_goods_name"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_voucher_img"
+        style="@style/text_home_money_icon"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tv_voucher_goods_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tv_voucher_img"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_e51c23" />
+
+</RelativeLayout>

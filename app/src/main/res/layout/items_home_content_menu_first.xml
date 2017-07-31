@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_first_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f5f5f5"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_goods_one"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="92dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_home_goods_one"
+                    style="@style/text_home_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="29dp"
+                    android:maxEms="6" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_home_goods_one"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/text_home_money_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_one_money"
+                        style="@style/text_home_money"
+                        android:layout_marginLeft="@dimen/dimen_2" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_goods_one_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_first" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_goods_two"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="92dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_home_goods_two"
+                    style="@style/text_home_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="29dp" />
+
+                <ImageView
+                    android:id="@+id/iv_goods_two_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_first" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_home_goods_two"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/text_home_money_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_two_money"
+                        style="@style/text_home_money"
+                        android:layout_marginLeft="@dimen/dimen_2" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f5f5f5"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_goods_three"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_home_goods_three"
+                    style="@style/text_home_name"
+                    android:layout_below="@+id/iv_goods_three_pic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:id="@+id/iv_goods_three_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_first" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_home_goods_three"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/y2"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/text_home_money_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_three_money"
+                        style="@style/text_home_money"
+                        android:layout_marginLeft="@dimen/dimen_2" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_goods_four"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_home_goods_four"
+                    style="@style/text_home_name"
+                    android:layout_below="@+id/iv_goods_four_pic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:id="@+id/iv_goods_four_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_first" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_home_goods_four"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/y2"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/text_home_money_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_four_money"
+                        style="@style/text_home_money"
+                        android:layout_marginLeft="@dimen/dimen_2" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_goods_five"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/dimen_3"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_home_goods_five"
+                    style="@style/text_home_name"
+                    android:layout_below="@+id/iv_goods_five_pic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp" />
+
+                <ImageView
+                    android:id="@+id/iv_goods_five_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/icon_first" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_home_goods_five"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/y2"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/text_home_money_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_five_money"
+                        style="@style/text_home_money"
+                        android:layout_marginLeft="@dimen/dimen_2" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

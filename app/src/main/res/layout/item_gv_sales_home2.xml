@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_integral_goods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f5f5f5"
+    android:padding="@dimen/dimen_6">
+    <!--商品图片-->
+    <ImageView
+        android:id="@+id/img_sales_home"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="6dp"
+        android:clickable="false"
+        android:focusable="false" />
+    <!--商品名称-->
+    <TextView
+        android:id="@+id/tv_name_sales_home"
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/img_sales_home"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/y12"
+        android:layout_toRightOf="@+id/img_sales_home"
+        android:clickable="false"
+        android:ellipsize="end"
+        android:focusable="false"
+        android:maxLines="2"
+        android:padding="@dimen/dimen_2"
+        android:textColor="@color/color_title_text"
+        android:textSize="@dimen/dimen_12" />
+
+    <LinearLayout
+        android:id="@+id/ll_stExchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_sales_home"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/img_sales_home"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_2">
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有效期："
+            android:textColor="@color/et_resetpsd_fist"
+            android:textSize="@dimen/dimen_11" />
+
+        <TextView
+            android:id="@+id/tv_stExchangeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/et_resetpsd_fist"
+            android:textSize="@dimen/dimen_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_take_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img_sales_home"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/img_sales_home"
+        android:clickable="false"
+        android:focusable="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_2"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="领取地点："
+            android:textColor="@color/et_resetpsd_fist"
+            android:textSize="@dimen/dimen_11" />
+
+        <TextView
+            android:id="@+id/tv_take_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合肥蜀山区"
+            android:textColor="@color/et_resetpsd_fist"
+            android:textSize="@dimen/dimen_12" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_soon_take_goods"
+        android:layout_width="68dp"
+        android:layout_height="32dp"
+        android:layout_alignBottom="@+id/img_sales_home"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/bg_soon_take_red"
+        android:gravity="center"
+        android:padding="@dimen/dimen_5"
+        android:text="@string/take_goods"
+        android:textColor="@color/color_cccccc"
+        android:textSize="@dimen/dimen_14" />
+
+</RelativeLayout>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?><!--确定订单页面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--头部标题-->
+    <include
+        android:id="@+id/indent_title"
+        layout="@layout/layout_title_back" />
+
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:id="@+id/refresh_view_indent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ry_bottom_indent"
+        android:layout_below="@+id/indent_title">
+
+        <include
+            android:id="@+id/refresh_head_details"
+            layout="@layout/refresh_head" />
+
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:id="@+id/scrollview_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--姓名-->
+                <TextView
+                    android:id="@+id/indent_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="14dp"
+                    android:text=""
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <!--手机号-->
+                <TextView
+                    android:id="@+id/indent_tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/indent_tv_name"
+                    android:text=""
+                    android:textColor="@color/tv_name_indent" />
+                <!--默认还是更改-->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/indent_tv_number"
+                    android:background="@color/bg_default_indent"
+                    android:text="@string/btn_default_indent"
+                    android:textColor="@color/btn_default_indent"
+                    android:textSize="12sp" />
+                <!--定位按钮-->
+                <ImageView
+                    android:id="@+id/indent_iv_address"
+                    android:layout_width="12dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/indent_tv_name"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/img_indent_address" />
+                <!--显示地址-->
+                <TextView
+                    android:id="@+id/indent_tv_address"
+                    android:layout_width="258dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indent_tv_name"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/indent_iv_address"
+                    android:text=""
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--选择地址-->
+                <ImageView
+                    android:id="@+id/indent_btn_choose_address"
+                    android:layout_width="23dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/indent_tv_name"
+                    android:layout_marginRight="14dp"
+                    android:src="@mipmap/img_indent_choose_address" />
+                <!--线-->
+                <TextView
+                    android:id="@+id/indent_tv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/indent_tv_address"
+                    android:background="@color/bg_layout_indent" />
+
+                <include
+                    android:id="@+id/il_position_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indent_tv_line"
+                    layout="@layout/layout_title_position" />
+                <!--商品的显示ListView-->
+                <ListView
+                    android:id="@+id/indent_lv_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/il_position_indent" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/indent_lv_shop"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:text="选择优惠券"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--选择优惠券按钮-->
+                <ImageView
+                    android:id="@+id/img_choice_coupon_indent"
+                    android:layout_width="23dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/indent_lv_shop"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@mipmap/img_indent_choose_address" />
+
+                <View
+                    android:id="@+id/view_line_indent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_coupon_indent"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/bg_layout_indent" />
+                <!--发票类型-->
+                <TextView
+                    android:id="@+id/tv_invoice_style_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/view_line_indent"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:text="发票类型:"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--发票-->
+                <TextView
+                    android:id="@+id/tv_invoice_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/view_line_indent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_invoice_style_indent"
+                    android:gravity="center"
+                    android:text="超市小票"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--线-->
+                <View
+                    android:id="@+id/view_lin_indent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_invoice_style_indent"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/bg_layout_indent" />
+                <!--买家留言-->
+                <TextView
+                    android:id="@+id/tv_user_message_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/view_lin_indent"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:text="买家留言:"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--卖家输入的留言-->
+                <EditText
+                    android:id="@+id/et_user_message_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:background="@null"
+                    android:layout_below="@+id/view_lin_indent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_user_message_indent"
+                    android:gravity="center"
+                    android:hint="@string/et_user_message_indent"
+                    android:textColor="@color/tv_distance_indent"
+                    android:textSize="12dp" />
+                <View
+                    android:id="@+id/view_li_indent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_user_message_indent"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/bg_layout_indent" />
+                <!--共多少商品-->
+                <TextView
+                    android:id="@+id/tv_goods_number_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/view_li_indent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="共19件商品："
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_count_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/view_li_indent"
+                    android:layout_toRightOf="@+id/tv_goods_number_indent"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="合计："
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_money_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/view_li_indent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="￥0"
+                    android:textColor="@color/btn_commit_indent"
+                    android:textSize="14dp" />
+                <View
+                    android:id="@+id/indent_tv_lines"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_below="@+id/tv_goods_number_indent"
+                    android:background="@color/bg_layout_indent" />
+                <include
+                    android:id="@+id/il_positions_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indent_tv_lines"
+                    layout="@layout/layout_title_position" />
+                <ListView
+                    android:id="@+id/indent_lv_shop_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/il_positions_indent" />
+
+                <TextView
+                    android:id="@+id/tv_coupon_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/indent_lv_shop_two"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:text="配送方式"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/indent_lv_shop_two"
+                    android:layout_toRightOf="@+id/tv_coupon_two_indent"
+                    android:layout_marginLeft="34dp"
+                    android:gravity="center"
+                    android:text="送货上门"
+                    />
+                <!--选择配送方式-->
+                <ImageView
+                    android:id="@+id/img_choice_coupon_two_indent"
+                    android:layout_width="23dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/indent_lv_shop_two"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@mipmap/img_indent_choose_address" />
+
+                <View
+                    android:id="@+id/view_lie_indent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_coupon_two_indent"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/bg_layout_indent" />
+                <!--发票类型-->
+                <TextView
+                    android:id="@+id/tv_invoice_style_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/view_lie_indent"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:text="发票类型:"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--发票-->
+                <TextView
+                    android:id="@+id/tv_invoice_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/view_lie_indent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_invoice_style_two_indent"
+                    android:gravity="center"
+                    android:text="超市小票"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--线-->
+                <View
+                    android:id="@+id/view_ln_indent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_invoice_style_two_indent"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/bg_layout_indent" />
+                <!--买家留言-->
+                <TextView
+                    android:id="@+id/tv_user_message_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/view_ln_indent"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center"
+                    android:text="买家留言:"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--卖家输入的留言-->
+                <EditText
+                    android:id="@+id/et_user_message_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:background="@null"
+                    android:layout_below="@+id/view_ln_indent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_user_message_two_indent"
+                    android:gravity="center"
+                    android:hint="@string/et_user_message_indent"
+                    android:textColor="@color/tv_distance_indent"
+                    android:textSize="12dp" />
+                <View
+                    android:id="@+id/view_l_indent"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/tv_user_message_two_indent"
+                    android:layout_marginLeft="14dp"
+                    android:background="@color/bg_layout_indent" />
+                <!--共多少商品-->
+                <TextView
+                    android:id="@+id/tv_goods_number_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/view_l_indent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="共19件商品："
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_count_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/view_l_indent"
+                    android:layout_toRightOf="@+id/tv_goods_number_two_indent"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="合计："
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/tv_money_two_indent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/view_l_indent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:text="￥9999.99"
+                    android:textColor="@color/btn_commit_indent"
+                    android:textSize="14dp" />
+                <!--金币抵现-->
+                <TextView
+                    android:id="@+id/indent_tv_gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/tv_goods_number_two_indent"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_gold_indent"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--显示可用积分-->
+                <TextView
+                    android:id="@+id/indent_tv_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/tv_goods_number_two_indent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/indent_tv_gold"
+                    android:gravity="center_vertical"
+                    android:text="可用300积分抵￥3.00"
+                    android:textColor="@color/tv_distance_indent"
+                    android:textSize="12dp" />
+                <!--选择-->
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_goods_number_two_indent"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/img_indent_button_no" />
+                <!--线-->
+                <TextView
+                    android:id="@+id/indent_tv_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/indent_tv_gold"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/bg_layout_indent" />
+                <!--匿名购买-->
+                <TextView
+                    android:id="@+id/indent_tv_anonymity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/indent_tv_lin"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_anonymity_indent"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14dp" />
+                <!--选择是否匿名购买-->
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="19dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/indent_tv_lin"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/img_indent_button_yes" />
+            </RelativeLayout>
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+    <!--底部模块-->
+    <RelativeLayout
+        android:id="@+id/ry_bottom_indent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!--线-->
+        <TextView
+            android:id="@+id/indent_tv_linn"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/indent_btn_commit"
+            android:background="@color/bg_layout_indent" />
+        <!--提交订单-->
+        <Button
+            android:id="@+id/indent_btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btn_commit_indent"
+            android:text="@string/btn_commit_indent"
+            android:textColor="@color/btn_default_indent"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <!--合计价格-->
+        <TextView
+            android:id="@+id/indent_tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@+id/indent_btn_commit"
+            android:gravity="center_vertical"
+            android:text="￥9999.99"
+            android:textColor="@color/btn_commit_indent"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/indent_tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/indent_tv_money"
+            android:gravity="center_vertical"
+            android:text="@string/tv_total_indent"
+            android:textColor="@color/tv_name_indent"
+            android:textSize="14dp" />
+        <!--多少件商品-->
+        <TextView
+            android:id="@+id/indent_tv_piece"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/indent_tv_total"
+            android:gravity="center_vertical"
+            android:text="共99件"
+            android:textColor="@color/tv_name_indent"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

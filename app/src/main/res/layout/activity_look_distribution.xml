@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_back" />
+
+    <!-- 编号送达时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_attr_color_999999"
+                android:layout_marginTop="18dp"
+                android:text="@string/order_number" />
+
+            <TextView
+                android:id="@+id/tv_look_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="1233585541474414"
+                android:textColor="@color/color_1fa2ee"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_attr_color_999999"
+                android:layout_marginTop="18dp"
+                android:text="@string/send_start_time" />
+
+            <TextView
+                android:id="@+id/tv_send_time"
+                style="@style/text_attr_color_333333"
+                android:layout_marginTop="18dp"
+                android:text="@string/send_soon" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f5f5f5" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_first"
+        android:layout_marginTop="20dp"
+        style="@style/ll_all">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/first_point"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/rad_point" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/color_dddddd" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_order_msg">
+
+            <TextView
+                android:id="@+id/first_text"
+                style="@style/text_attr_color_333333"
+                android:text="@string/thanks_for_welcome" />
+
+            <TextView
+                android:id="@+id/tv_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2016-07-05 10:19"
+                android:textColor="@color/color_999999"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_two"
+        android:layout_marginTop="13dp"
+        style="@style/ll_all">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/two_point"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/huise_point" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/color_dddddd" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_order_msg">
+
+            <TextView
+                android:id="@+id/tv_two_with_people"
+                style="@style/text_attr_color_999999_no_left"
+                android:text="您的宝贝正朝着您飞奔而来，请注意查收" />
+
+            <TextView
+                android:id="@+id/tv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2016-07-05 10:19"
+                android:textColor="@color/color_999999"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_three"
+        android:layout_marginTop="13dp"
+        style="@style/ll_all">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/three_point"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/huise_point" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/color_dddddd" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_order_msg">
+
+            <TextView
+                android:id="@+id/three_text"
+                style="@style/text_attr_color_999999_no_left"
+                android:text="商家已接单，正在为您准备商品，打印商票" />
+
+            <TextView
+                android:id="@+id/tv_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2016-07-05 10:19"
+                android:textColor="@color/color_999999"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_four"
+        android:layout_marginTop="13dp"
+        style="@style/ll_all">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/four_point"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/huise_point" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/ll_order_msg">
+
+            <TextView
+                android:id="@+id/four_text"
+                style="@style/text_attr_color_999999_no_left"
+                android:text="您提交了订单，等待系统确认" />
+
+            <TextView
+                android:id="@+id/tv_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="2016-07-05 10:19"
+                android:textColor="@color/color_999999"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

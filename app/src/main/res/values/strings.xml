@@ -1,0 +1,465 @@
+<resources>
+    <string name="app_name">惠七天_内测版</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <!-- 注册界面-->
+    <string name="phone_activity_register">请输入手机号</string>
+    <string name="message_activity_register">请输入短信验证码</string>
+    <string name="getcode_activity_register">获取短信验证码</string>
+    <string name="next_activity_register">下一步</string>
+    <string name="text_activity_register">确认表示同意《惠七天注册协议》</string>
+    <string name="layout_title_back">顶部标题</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="register_title">手机快速注册</string>
+
+
+    <!--找回密码界面-->
+    <string name="title_activity_findpassword">找回密码</string>
+
+    <!-- login 登陆界面-->
+    <string name="text_login_name">姓名</string>
+    <string name="str_login_btn">登录</string>
+    <string name="str_login_tel">手机号</string>
+    <string name="str_login_psd">密码</string>
+    <string name="str_login_fgpsd">忘记密码</string>
+    <string name="str_login_ftreg">快速注册</string>
+    <string name="str_login_title">账号登录</string>
+
+
+    <!--密码重置-->
+    <string name="str_resetpsd_first">请设置登录密码</string>
+    <string name="str_resetpsd_again">再次确认输入密码</string>
+    <string name="str_resetpsd_btn">完成</string>
+    <string name="str_resetpsd_title">密码重置</string>
+    <string name="resetpsd_title">密码重置</string>
+
+
+    <!-- 引导页界面-->
+    <string name="btn_welcome_start">开始体验</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_find">FindActivity</string>
+
+    <!--menu界面-->
+    <string name="str_menu_home">首页</string>
+    <string name="str_menu_class">分类</string>
+    <string name="str_menu_sopcart">购物车</string>
+    <string name="str_menu_person">我的</string>
+
+
+    <!--详细商品界面-->
+    <string name="base_tv_collect">收藏</string>
+    <string name="base_tv_shopping_cat">购物车</string>
+    <string name="base_tv_add_shopping_cat">加入购物车</string>
+    <string name="base_tv_buy">立即购买</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_indent">IndentActivity</string>
+    <string name="btn_check_all">查看全部评论</string>
+    <string name="tv_recommend_details">商品推荐</string>
+    <string name="tv_comment">评论</string>
+    <string name="tv_expiration_data">商品详细:</string>
+    <string name="goods_data">商品保质期:</string>
+    <string name="goods_data_start"> 生产日期:</string>
+
+
+
+    <!--确认订单界面-->
+    <string name="btn_default_indent">默认</string>
+    <string name="btn_commit_indent">提交订单</string>
+    <string name="tv_total_indent">合计:</string>
+    <string name="tv_gold_indent">金币诋现</string>
+    <string name="tv_anonymity_indent">匿名购买</string>
+    <string name="et_user_message_indent">选填,可填写您和卖家达成一致的想法</string>
+    <string name="buy_message">买家留言:</string>
+
+
+    <string name="tv_edit_indent">编辑</string>
+
+
+    <!--findResult界面-->
+    <string name="str_find_result_num">销量</string>
+    <string name="str_find_result_send">配送</string>
+    <string name="str_find_result_evaluate">评价</string>
+    <string name="str_find_result_s_send">起送</string>
+    <string name="str_find_result_goods_name">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</string>
+    <string name="str_find_result_shop_address">惠七天黄山路店惠七天黄山路店</string>
+    <string name="str_find_result_distance">千米</string>
+    <string name="str_find_result_add_cart">加入购物车</string>
+    <string name="str_find_result_dollar">¥ </string>
+    <string name="str_result_price_big">5999</string>
+    <string name="str_result_price_small">.99</string>
+
+    <!-- 搜索界面-->
+    <string name="str_find_search">搜索</string>
+    <string name="str_find_hint">请输入商品名称或品牌</string>
+    <string name="str_find_near_search">最近搜索</string>
+
+    <!--刷新加载-->
+
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">已经是最新数据了</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">没有更多数据了</string>
+
+    <!-- 主页-->
+    <string name="tv_menu_ad">会七天商店上新品了，进口食品嗨不停</string>
+    <string name="mai">满</string>
+    <string name="tv">元免配送</string>
+
+    <!--分类界面-->
+    <string name="title_one">为您推荐</string>
+    <string name="title_two">百货日用</string>
+    <string name="title_three">针织</string>
+    <string name="title_four">洗化用品</string>
+    <string name="title_five">食品</string>
+    <string name="title_six">福食</string>
+    <string name="title_seven">香烟代购</string>
+    <string name="title_eight">进口食品</string>
+    <string name="title_nine">品牌</string>
+    <string name="title_activity_address">AddressActivity</string>
+    <string name="str_class_hint">搜索</string>
+
+    <!-- 个人中心-->
+    //登陆/注册 代金卷
+    //浏览足迹 我的订单 查看全部订单 积分 金币
+    <string name="my_title">我的惠七天</string>
+    <string name="my_login_register">当前没有登陆</string>
+    <string name="my_save_goods">收藏的商品</string>
+    <string name="my_browse_footprint">浏览足迹</string>
+    <string name="my_orders">我的订单</string>
+    <string name="see_all_orders">查看全部订单</string>
+    <string name="my_menu_one">待付款</string>
+    <string name="my_menu_two">待发货</string>
+    <string name="my_menu_three">待收货</string>
+    <string name="my_menu_four">待评价</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="my_points">积分</string>
+    <string name="my_golds">金币</string>
+    <string name="my_voucher">点击查看代金券</string>
+    <string name="my_voucher_unused">未使用</string>
+    <string name="my_voucher_used">已使用</string>
+    <string name="my_voucher_out_of_data">已过期</string>
+    <string name="take_address">收货地址</string>
+    <string name="take_address_two">收货地址:</string>
+    <string name="suggestion_feedback">意见反馈</string>
+    <string name="welcome_valuate">欢迎评价</string>
+    <string name="title_activity_message">MessageActivity</string>
+
+    <!--系统消息-->
+    <string name="tv_title_message">消息中心</string>
+    <string name="tv_title_system_message">系统消息</string>
+    <string name="tv_title_merchant_message">商家已经接单了</string>
+    <string name="tv_title_exercise_message">活动消息</string>
+    <string name="tv_title_delivery_message">配送消息</string>
+
+    <!--商品详细-->
+    <string name="tv_title_goods_details">商品详情</string>
+
+    <!--评论界面-->
+    <string name="tv_all_evaluate">全部评价</string>
+    <string name="tv_good_evaluate">好评</string>
+    <string name="tv_medium_evaluate">中评</string>
+    <string name="tv_bad_evaluate">差评</string>
+    <string name="tv_title_evaluate">评价</string>
+    <string name="tv_evaluate">暂无评论,等待你的评论</string>
+
+    <!-- 个人信息-->
+    <string name="person_title">个人信息</string>
+    <string name="person_head_change">修改个人头像</string>
+    <string name="person_nickname">昵称</string>
+    <string name="person_nickname_show">这是我的昵称</string>
+    <string name="person_sex">性别</string>
+    <string name="person_sex_show">男</string>
+    <string name="person_account">账号</string>
+    <string name="person_account_show">mm12345678</string>
+    <string name="person_bind_phone">绑定手机</string>
+    <string name="person_bind_phone_show">18888888888</string>
+
+    <!-- 个人信息修改-->
+    <string name="person_bind_phone_prompt">绑定手机号，可以提高账号的安全等级</string>
+    <string name="person_bind_phone_txt_left">已绑定：</string>
+    <string name="person_bind_phone_txt_right">18888888888</string>
+    <string name="person_remove_phone">更换手机号</string>
+    <string name="person_remove_nike_name">更改昵称</string>
+    <string name="tv_prompt">温馨提示：</string>
+    <string name="tv_prompt1">1：一个手机号尽显绑定一个账号。</string>
+    <string name="tv_prompt2">2：为了保证账号安全，手机号绑定后无法解除绑定，可以更换绑定。</string>
+    <string name="tv_prompt3">3：绑定或更换绑定手机号后3个月内不能再次更换，3个月后可以自行更换绑定。</string>
+    <string name="tv_prompt4">4：遇到其他问题，请联系在线客服。</string>
+    <string name="person_change_nickname">更改昵称</string>
+    <string name="person_change_bind_phone">手机号绑定</string>
+    <string name="person_nickname_length">昵称不能超过20个汉字</string>
+    <string name="person_nickname_modify_success">修改成功</string>
+
+    <!-- popWindow相关-->
+    <string name="sex_secrecy">保密</string>
+    <string name="pop_show_man">男</string>
+    <string name="pop_show_woman">女</string>
+    <string name="pop_show_cancel">取消</string>
+    <string name="pop_open_cammer">拍照</string>
+    <string name="pop_open_album">从相册选择</string>
+    <string name="pop_show_introduce_clear">删除后图片等多媒体消息需要重新下载查看。确定删除?</string>
+    <string name="pop_show_clear">清除</string>
+
+    <!-- 设置页面-->
+    <string name="more_set">更多设置</string>
+    <string name="set_push">消息推送设置</string>
+    <string name="set_clear_cache">清除缓存</string>
+    <string name="set_wifi_load_pic">非wifi情况下手动下载图片</string>
+    <string name="set_about_huiqitian">关于惠七天</string>
+    <string name="set_exist_account">退出当前账号</string>
+
+    <!--订单页面-->
+    <string name="all_orders">全部订单</string>
+    <string name="evaluation_and_share_order">评价晒单</string>
+    <string name="title_activity_near_shop">NearShop</string>
+    <string name="order_detail_title">订单详细</string>
+
+
+    <!--设置-->
+    <string name="tv_title_about">关于惠七天</string>
+    <string name="tv_introduce_about">惠七天介绍</string>
+    <string name="tv_grade_about">给我们打分</string>
+    <string name="tv_share_about">分享二维码给好友</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="tv_title_message_push">消息推送设置</string>
+    <string name="tv_sub_vision"> 版本V1.</string>
+
+
+    <!-- 代金券页面-->
+    <string name="voucher_title">代金券</string>
+    <string name="title_activity_shop_goods">ShopGoodsActivity</string>
+
+    <!--代金券商品页面-->
+    <string name="voucher_goods_title">代金券商城</string>
+
+    <!-- 商店商品-->
+    <string name="shop_goods_search">搜索超市商品</string>
+
+
+    <!--签到界面-->
+    <string name="tv_sign_in">签到</string>
+    <string name="tv_sign_content">已连续签到</string>
+    <string name="look_distribution">配送信息</string>
+
+
+    <!-- 附近店铺-->
+    <string name="shop_title">附近店铺</string>
+
+
+    <!-- 收货地址相关-->
+    <string name="receiver_address">收货地址管理</string>
+    <string name="add_receiver_address">添加</string>
+    <string name="btn_add_receiver_address">添加新地址</string>
+    <string name="new_address">新增地址</string>
+    <string name="edit_address">编辑地址</string>
+
+
+    <!--确认订单-->
+    <string name="str_affirm_orderTitle">确认订单</string>
+
+    <!-- 评价提交-->
+    <string name="opinion_commit">提交</string>
+    <string name="opinion_title">意见反馈</string>
+    <string name="title_activity_about_apk">AboutAPKActivity</string>
+
+    <!-- 惠七天的介绍-->
+    <string name="about_apk">惠七天介绍</string>
+    <string name="about_apk_msg">我们是谁？\n
+        惠七天（www.huiqitian）连锁超市是安徽芸聚网络科技有限公司，下属运营品牌，产品主打“便捷、优惠、优质”的运营理念。公司致力于改变中国食品安全现状。同时通过发展加盟店，使惠七天连锁超市成为连锁超市的领航者\n
+              在食品安全（假冒产品）每况愈下的今天，人们普遍说的很多却做得很少，而我们的想法很简单，就是想大家能快速购买到自己需要的商品。\n
+              互联网时代到来，人们喜欢在网上购买自己的商品，但是由于地域的限制，下单后需等3~5天才可以收到货物，通过惠七天手机App下单，下单后商品1个小时内送达！\n\n
+        联系我们\n您对惠七天连锁超市在运营过程中有任何建议或意见，您都可以通过以下方式和我们取得联系：\n联系电话：4006433369\n客服邮箱：service@yunjukj.com
+    </string>
+    <string name="title_activity_history">HistoryActivity</string>
+
+
+    <!-- 历史记录-->
+    <string name="history_title">浏览记录</string>
+    <string name="collect_title">收藏</string>
+    <string name="history_clear">清空</string>
+    <!--签到界面-->
+    <string name="tv_title_sign_in">每日签到</string>
+    <string name="tv_sign_in_one">今日签到可领</string>
+    <string name="tv_sign_in_two">5</string>
+    <string name="tv_title_sign_detail">金币明细</string>
+    <string name="tv_sign_in_three">金币</string>
+    <string name="tv_sign_in_four">连续签到有更多惊喜</string>
+    <string name="tv_data_sign_in_one">+5</string>
+    <string name="tv_data_sign_in_two">+10</string>
+    <string name="tv_gold_details_sign_in">我的金币明细</string>
+    <string name="tv_gold_draw_sign_in">金币抽奖</string>
+    <string name="tv_text_sign_in">幸运大转盘，幸运就在手指尖</string>
+    <string name="tv_record_sign_in">中奖纪录</string>
+    <string name="tv_text_one">金币可抵现，快去使用吧！</string>
+    <string name="tv_text_two">查看规则</string>
+    <string name="title_activity_foodstuff">FoodstuffActivity</string>
+
+    <!--立即支付-->
+    <string name="now_pay">立即支付</string>
+    <string name="sure_pay">确认支付</string>
+
+    <!--进口食品 -->
+    <string name="str_find_stuff_num">销量</string>
+    <string name="str_find_stuff_send">口碑</string>
+    <string name="str_find_stuff_evaluate">价格</string>
+    <string name="str_find_stuff_s_send">最新</string>
+
+    <!--订单详情页-->
+    <string name="order_details_delete">删除订单</string>
+    <string name="order_details_cancel">取消订单</string>
+    <!--消息推送设置-->
+    <string name="message_push_set">消息推送提醒</string>
+    <string name="message_push_set_open_close">已开启</string>
+    <string name="message_push_sound">消息推送音效</string>
+    <string name="message_push_set_content">在android的”设置——通知“功能中找到应用程序”惠七天“，可以更改惠七天的消息推送提醒设置。</string>
+
+    <!-- 中间菜单-->
+    <!-- 附近商店  每日签到 进口食品    积分商城    浏览记录-->
+
+    <string name="near_shop_activity">附近商店</string>
+    <string name="signin_activity">每日签到</string>
+    <string name="foods_stuff_activity">进口食品</string>
+    <string name="integral_store_avtivity">积分商城</string>
+    <string name="history_activity">浏览记录</string>
+
+
+    <!-- 商品名-->
+    <string name="good_name">这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称这是商品名称</string>
+
+    <!-- 关于-->
+
+    <string name="tv_about_apk">我们是谁？\n\t\t惠七天（www.huiqitian）连锁超市是安徽芸聚网络科技有限公司，下属运营品牌，产品主打“便捷、优惠、优质”的运营理念。
+        公司致力于改变中国食品安全现状。同时通过发展加盟店，使惠七天连锁超市成为连锁超市的领航者
+     \n \t\t在食品安全（假冒产品）每况愈下的今天，人们普遍说的很多却做得很少，而我们的想法很简单，就是想大家能快速购买到自己需要的商品。
+     \n\t\t 互联网时代到来，人们喜欢在网上购买自己的商品，但是由于地域的限制，下单后需等3~5天才可以收到货物，通过惠七天手机App下单，下单后商品1个小时内送达！\n联系我们
+\n您对惠七天连锁超市在运营过程中有任何建议或意见，您都可以通过以下方式和我们取得联系：
+\n联系电话：4006433369
+\n客服邮箱：service@yunjukj.com
+</string>
+
+    <!-- 收货地址-->
+    <string name="address_sex_man">先生</string>
+    <string name="address_sex_women">女士</string>
+    <string name="address_phone">联系电话</string>
+    <string name="address_mobile_phone">你的手机号</string>
+    <string name="address_unused_phone">备用电话</string>
+    <string name="address_for_take_tv">收货地址</string>
+    <string name="city">选择城市</string>
+    <string name="address_for_take">学校/小区/街道等</string>
+    <string name="address_detail">详细地址（如门牌号)</string>
+    <string name="address_sure">确定</string>
+    <string name="city_tv">可选择城市，不选择则为当前城市</string>
+
+    <!-- 选择地址-->
+    <string name="choose_address_choose">选择地址</string>
+    <string name="choose_address_input">请输入地址</string>
+    <string name="choose_address_now">当前地址</string>
+    <string name="address_mobile_near">附近地址</string>
+    <string name="address_mobile_more">更多地址</string>
+    <string name="address_mobile_take">收货地址</string>
+
+
+    <string name="locating">定位中</string>
+    <string name="search">搜索</string>
+    <string name="notfound">抱歉，未找到！</string>
+    <string name="key_word">请输入关键字</string>
+    <string name="locatez_as">定位为</string>
+    <string name="switch_ornot">，是否切换？</string>
+    <string name="city_show_text_hot">热门城市</string>
+    <string name="city_hotcity_curlocationcity_text">定位城市</string>
+    <string name="third_title_close">关闭</string>
+    <string name="city_hotcity_searchedittext_hint">请输入城市名,首字母或拼音</string>
+    <string name="xml_loading_01">加载中</string>
+
+    <string name="cancel">取消</string>
+    <string name="quit_dialog_cancel">取 消</string>
+    <string name="assistant_upload_dialog_title">提示</string>
+    <string name="version_number_app">版本V1.0.0</string>
+    <string name="commit_Evaluates">提交评价</string>
+    <string name="no_name_Evaluates">匿名评价</string>
+    <string name="address_tips">亲，您还没有添加收货地址哦！</string>
+    <string name="address">添加地址</string>
+    <string name="food_stuff">进口食品</string>
+    <string name="location_no_data">未能获取到您的位置，请轻轻动下手指选择城市</string>
+    <string name="delete_order_dialog">确定要删除订单吗</string>
+    <string name="exchange_goods_dialog_message">此次兑换将使用290积分,确定兑换？</string>
+    <string name="search_city_empty">暂时未开通您要查找的城市!</string>
+    <string name="search_city_empty_two">请输入城市名,首字母或拼音</string>
+    <string name="no_data">没有数据！</string>
+    <string name="nearby_no_shop">附近暂无超市</string>
+    <string name="no_network">网络开小差，稍后在试试哦</string>
+    <string name="load_again">重新加载</string>
+    <string name="location_loading">位置确定中...</string>
+    <string name="apply_content">便利店是为了小区住户提供快捷生活服务在线超市，您只需要具有一个小仓库或者店面，即可申请开通一家线上超市。</string>
+    <string name="apply_content_opinion">您附近还没有便利店，您可以申请开店自己做老板，提供服务，创造商机</string>
+    <string name="apply_shop">我要申请开店</string>
+    <string name="send_way">配送方式</string>
+    <string name="send_money">配送费：</string>
+    <string name="receipt_way">发票类型:</string>
+    <string name="shop_receipt">超市小票</string>
+    <string name="sign_content">连续签到奖励（APP端）</string>
+    <string name="take_goods">立即领取</string>
+    <string name="order_send_free">订单满59元使用（不包含配送费）</string>
+    <string name="used_data">使用期限</string>
+    <string name="price_ago">原价￥99999.9</string>
+    <string name="price_cheap">超值价</string>
+    <string name="buy_soon">立即抢购</string>
+    <string name="look_send">配送查看</string>
+    <string name="take_true">确认收货</string>
+    <string name="opinion_order">评价订单</string>
+    <string name="delete_order">删除订单</string>
+    <string name="cancle_order">取消订单</string>
+    <string name="pay_soon">立即付款</string>
+    <string name="chose_city">选择城市</string>
+    <string name="address_content">默认地址</string>
+    <string name="address_no_send">此地址不在送货范围</string>
+    <string name="no_data_now">暂时无数据，您可以进行其他操作</string>
+    <string name="no_browse_data">暂无浏览记录</string>
+    <string name="exchange_goods_by_code">立即兑换</string>
+    <string name="my_code">我的积分</string>
+    <string name="how_get_more_code">如何获取更多积分？</string>
+    <string name="exchange_history">兑换记录</string>
+    <string name="order_number">订单编号：</string>
+    <string name="pay_number">支付单号：</string>
+    <string name="create_time">创建时间：</string>
+    <string name="send_time">发货时间：</string>
+    <string name="finish_time">成交时间：</string>
+
+
+    <string name="send_start_time">配送时间：</string>
+    <string name="send_soon">尽快送达</string>
+    <string name="thanks_for_welcome">感谢您在惠七天购物，欢迎您再次光临</string>
+    <string name="map_search_content_all">全部</string>
+    <string name="map_search_content_offices_building">写字楼</string>
+    <string name="map_search_content_village">小区</string>
+    <string name="map_search_content_school">学校</string>
+    <string name="opinion_content_length_marge">至多150个字</string>
+    <string name="deal_success">交易成功</string>
+    <string name="goods_take_person_name">收货人：</string>
+    <string name="shop_name">惠七天黄山店</string>
+    <string name="goods_all_price">商品总价：</string>
+    <string name="send_money_goods_details">配送费：</string>
+    <string name="order_money_goods_details">订单总价：</string>
+    <string name="pay_details">支付明细</string>
+    <string name="voucher_money">优惠券</string>
+    <string name="finally_payed_money">实际支付</string>
+    <string name="order_money_for_pay">订单金额</string>
+    <string name="zhifubao_pay">支付宝支付</string>
+    <string name="zhifubao_content">大家都在用的支付</string>
+    <string name="weixin_pay">微信支付</string>
+    <string name="weixin_pay_content">微信安全支付</string>
+    <string name="sales_hot">热卖商品</string>
+    <string name="new_goods_today">今日上新</string>
+    <string name="goods_recommend_for_you">为你推荐</string>
+
+
+</resources>

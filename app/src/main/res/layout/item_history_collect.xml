@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/iv_history_img"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:id="@+id/tv_history_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/iv_history_img"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_history_dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_history_name"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/iv_history_img"
+        android:textColor="@color/color_999999"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_history_dis"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/iv_history_img"
+        android:text="￥"
+        android:textColor="@color/color_e51c23"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_history_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_history_dis"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/iv_history_img"
+        android:textColor="@color/color_e51c23"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_below="@+id/iv_history_img"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/color_dddddd" />
+</RelativeLayout>

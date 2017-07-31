@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/icl_affirm_topTitle"
+        layout="@layout/layout_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_affirmOrder_btm"
+        android:layout_below="@+id/icl_affirm_topTitle">
+
+        <!--没有地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_address_def"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_hint_message_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address_tips" />
+
+                <TextView
+                    android:id="@+id/tv_affirm_addAddress"
+                    android:layout_width="113dp"
+                    android:layout_height="32dp"
+                    android:background="@color/color_e51c23"
+                    android:gravity="center"
+                    android:text="@string/address"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp" />
+                <!--分割线线-->
+                <TextView
+                    android:id="@+id/indent_tv_lines"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bg_layout_indent" />
+
+            </LinearLayout>
+            <!--收货地址-->
+            <RelativeLayout
+                android:id="@+id/rl_affirmOrder_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--姓名-->
+                <TextView
+                    android:id="@+id/tv_affirm_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--手机号-->
+                <TextView
+                    android:id="@+id/tv_affirm_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/tv_affirm_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tv_name_indent" />
+                <!--默认还是更改-->
+                <TextView
+                    android:id="@+id/tv_default_address"
+                    android:layout_width="40dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/tv_affirm_number"
+                    android:background="@color/bg_default_indent"
+                    android:gravity="center"
+                    android:text="@string/btn_default_indent"
+                    android:textColor="@color/btn_default_indent"
+                    android:textSize="12sp" />
+                <!--定位按钮-->
+                <ImageView
+                    android:id="@+id/iv_affirm_address"
+                    android:layout_width="13dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/tv_affirm_name"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/img_indent_address" />
+                <!--显示地址-->
+                <TextView
+                    android:id="@+id/tv_affirm_receiveAddress"
+                    android:layout_width="258dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_affirm_name"
+                    android:layout_marginBottom="14dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/iv_affirm_address"
+                    android:text=""
+                    android:textColor="@color/tv_name_indent"
+                    android:textSize="14sp" />
+                <!--选择地址-->
+                <ImageView
+                    android:id="@+id/iv_affirm_chooseAddress"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/indent_tv_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:src="@mipmap/img_indent_choose_address" />
+                <!--分割线线-->
+                <TextView
+                    android:id="@+id/indent_tv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bg_layout_indent" />
+            </RelativeLayout>
+            <!--订单列表-->
+            <yunju.com.huiqitian.vm.widget.ItemListView
+                android:id="@+id/lv_affirmOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_affirmOrder_btm"
+                android:layout_below="@+id/rl_affirmOrder_address"
+                android:divider="@color/bg_ly"
+                android:dividerHeight="@dimen/dimen_10" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_affirmOrder_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:background="@color/bg_ly" />
+
+        <!--买家留言-->
+        <LinearLayout
+            android:id="@+id/ll_affirmOrder_Msg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_user_message_indent"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_below="@+id/view_lin_indent"
+                android:layout_marginLeft="14dp"
+                android:gravity="center"
+                android:text="@string/buy_message"
+                android:textColor="@color/tv_name_indent"
+                android:textSize="14sp" />
+            <!--卖家输入的留言-->
+            <EditText
+                android:id="@+id/et_affirm_leaveMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginLeft="6dp"
+                android:background="@null"
+                android:hint="@string/et_user_message_indent"
+                android:textColor="@color/tv_name_indent"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!--选择优惠券-->
+        <!-- <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="14dp"
+             android:visibility="visible">
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="46dp"
+                 android:layout_marginLeft="14dp"
+                 android:gravity="center"
+                 android:text="选择优惠券"
+                 android:textColor="@color/tv_name_indent"
+                 android:textSize="14dp" />
+             &lt;!&ndash;选择优惠券按钮&ndash;&gt;
+             <ImageView
+                 android:id="@+id/img_affirmBtm_chooseCoupon"
+                 android:layout_width="23dp"
+                 android:layout_height="22dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginTop="13dp"
+                 android:src="@mipmap/img_indent_choose_address" />
+         </RelativeLayout>
+
+         &lt;!&ndash;分割线&ndash;&gt;
+         <View
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/dimen_1"
+             android:layout_marginLeft="14dp"
+             android:background="@color/bg_layout_indent" />-->
+
+        <!--金币抵现-->
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp">
+
+            <TextView
+                android:id="@+id/tv_affirm_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:text="金币抵现"
+                android:textColor="@color/tv_name_indent"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/tv_affirm_gold"
+                android:gravity="center"
+                android:text="可用300积分抵￥3.00"
+                android:textColor="@color/et_phone_register"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/img_indent_button_yes" />
+        </RelativeLayout>
+        <!--分割线-->
+        <View
+            android:id="@+id/view_line_indent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_marginLeft="14dp"
+            android:background="@color/bg_layout_indent" />
+
+        <!--匿名购买-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="匿名购买"
+                android:textColor="@color/tv_name_indent"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_affirm_anonymity"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/img_indent_button_yes" />
+        </RelativeLayout>
+        <!--分割线-->
+        <View
+            android:id="@+id/view_line_inde"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/bg_layout_indent" />
+
+        <!--布局底部提交订单布局-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical">
+
+            <!--共计订单件数-->
+            <TextView
+                android:id="@+id/tv_affirm_allOrderNum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@+id/tv_affirm_allTotal"
+                android:gravity="center"
+                android:text="共0件"
+                android:textColor="@color/tv_name_indent"
+                android:textSize="14sp" />
+
+            <!--合计-->
+            <TextView
+                android:id="@+id/tv_affirm_allTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/ll_affirm_allPrice"
+                android:gravity="center"
+                android:text="合计："
+                android:textColor="@color/tv_name_indent"
+                android:textSize="14sp" />
+
+            <!--订单总价格-->
+            <LinearLayout
+                android:id="@+id/ll_affirm_allPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="14dp"
+                android:layout_toLeftOf="@+id/tv_affirm_submitOrder"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/btn_commit_indent"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_affirm_all_bigPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:textColor="@color/btn_commit_indent"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_affirm_all_smallPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=".00"
+                    android:textColor="@color/btn_commit_indent"
+                    android:layout_gravity="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--提交订单-->
+            <TextView
+                android:id="@+id/tv_affirm_submitOrder"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/btn_commit_indent"
+                android:gravity="center"
+                android:text="@string/btn_commit_indent"
+                android:textColor="@color/btn_default_indent"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

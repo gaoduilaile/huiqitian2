@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f0be50">
+
+    <include
+        android:id="@+id/title_two_dimension"
+        layout="@layout/layout_title_back" />
+    
+    <ImageView
+        android:id="@+id/image_two_dimension"
+        android:background="@color/color_ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/title_two_dimension"/>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/transparency"
+        android:text="取消"
+        android:textSize="24sp"
+        android:textColor="@color/color_ffffff"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

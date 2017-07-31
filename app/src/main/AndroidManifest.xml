@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yunju.com.huiqitian"
+    android:versionCode="3"
+    android:versionName="1.0.2">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 百度地图相关 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!--百度自动更新SDK相关-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!--微信支付页面的权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- iBeancon功能与个推3.0电子围栏功能所需要的权限为非必需的可选择权限，可以选择性配置，以便使用个推3.0电子围栏功能 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.yunju.com.huiqitian" />
+
+    <!-- 替换为第三方应用的包名 -->
+    <permission
+        android:name="getui.permission.GetuiService.yunju.com.huiqitian"
+        android:protectionLevel="normal" />
+
+    <!-- 替换为第三方应用的包名 -->
+    <!-- 个推SDK权限配置结束 -->
+    <application
+        android:name=".AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--百度加固-->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="Baidu Market"/>
+
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <!--<intent-filter>
+            <action android:name ="android.intent.action.VIEW"/>
+            <category android:name ="android.intent.category.DEFAULT"/>
+            <data android:scheme = "wx2f6cfd1647038ca8"/>
+        </intent-filter>-->
+
+        <!-- 百度地图相关 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="G8VktR2thETEi4ZApIMohjXcdGGjicG1" />
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="hc3fsjGD0j5qy78X6wY0e6" />
+        <!-- 替换为第三方应用的APPID -->
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="vM5DJiMIEbA30u56VWo0H7" />
+        <!-- 替换为第三方应用的APPKEY -->
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="EW9OmjaDPRALxj2516VkF7" />
+        <!-- 替换为第三方应用的APPSECRET -->
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.igexin.sdk.PushServiceUser"
+            android:exported="true"
+            android:label="NotificationCenterUser" />
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 把"你的包名"替换为第三方应用的包名 -->
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.yunju.com.huiqitian"
+            android:exported="true"
+            android:process=":pushservice" />
+        <!-- 个推SDK配置结束 -->
+
+
+        <!-- 配置第三方Receiver -->
+        <!-- 此处com.getui.demo.PushDemoReceiver，需要替换成开发者自己的BroadcastReceiver -->
+        <receiver
+            android:name=".http.service.MyInformReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.hc3fsjGD0j5qy78X6wY0e6" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".vm.register.view.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.login.view.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 在MainMenu 里注册广播 -->
+        <activity
+            android:name=".vm.menu.view.MainMenu"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vm.indent.view.IndentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.details.view.DetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.details.view.GoodsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.evaluate.view.EvaluateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".vm.register.view.ReSetPassWordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.map.view.MapActivity"
+            android:label="@string/title_activity_map"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".vm.find.view.FindActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 百度地图定位相关 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 定位相关 -->
+        <service android:name=".http.service.MyLocationService" />
+
+        <activity
+            android:name=".vm.find.view.FindResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".vm.signin.view.SignInActivity" />
+        <activity
+            android:name=".vm.map.view.AddressActivity"
+            android:label="@string/title_activity_address"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".vm.message.view.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.message.view.MessageSystemAvtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.message.view.MessageResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.message.view.MessageExerciseAvtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.message.view.MessageExerciseDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.message.view.MessageSendActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".vm.my.view.PersonalMsgActivity" />
+        <activity android:name=".vm.my.view.ModifyActivity" />
+        <activity android:name=".vm.set.view.SetActivity" />
+        <activity android:name=".vm.set.view.PushSetActivity" />
+        <activity android:name=".vm.set.view.MessagePushSetActivity" />
+        <activity android:name=".vm.orders.view.OrdersActivity" />
+        <activity android:name=".vm.details.view.PictureActivity" />
+        <activity android:name=".vm.classify.view.ClassifyResultActivity" />
+        <activity android:name=".vm.details.view.EvaluatesActivity" />
+        <activity
+            android:name=".vm.orders.view.EvaluationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".vm.about.view.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".vm.vouchers.view.VoucherActivity" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <activity
+            android:name=".vm.orders.view.AffirmOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".vm.shop.view.NearShopActivity"
+            android:label="@string/title_activity_near_shop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".vm.orders.view.LookDistributionActivity" />
+        <activity
+            android:name=".vm.shop.view.ShopGoodsActivity"
+            android:label="@string/title_activity_shop_goods"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".vm.address.view.ReceiverAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.address.view.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.signin.view.GoldDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.opinion.view.OpinionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".vm.orders.view.OrderDetailedActivity" />
+        <activity
+            android:name=".vm.set.view.AboutAPKActivity"
+            android:label="@string/title_activity_about_apk"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vm.history.view.HistoryActivity"
+            android:label="@string/title_activity_history"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".vm.pay.view.PayActivity" />
+        <activity
+            android:name=".vm.find.view.FoodstuffActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_foodstuff"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".vm.integral.view.IntegralStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.integral.view.ExchangeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.integral.view.IntegralDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".vm.integral.view.TwoDimensionCodeActivity" />
+        <activity android:name=".vm.vouchers.view.VoucherGoodsActivity"/>
+
+        <!--kaishi-->
+        <activity
+            android:name=".vm.city.vm.CityList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vm.city.vm.searchactivity"
+            android:screenOrientation="portrait" />
+
+        <!--百度自动更新SDK相关-->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="9148739" />
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="eZsP7K31g02Or8elITvYiVxpLd8A5yiv" />
+
+        <activity
+            android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+            android:exported="false"
+            android:screenOrientation="sensor"
+            android:theme="@style/bdp_update_dialog_style_fullscreen" />
+        <receiver
+            android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS" />
+                <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

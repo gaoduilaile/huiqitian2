@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_goods_one_third"
+            android:layout_width="176dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_home_goods_one_third"
+                style="@style/text_home_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp"
+                android:maxEms="6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_home_goods_one_third"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_goods_one_money_third"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_goods_one_pic_third"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_goods_two_third"
+            android:layout_width="176dp"
+            android:layout_height="92dp"
+            android:layout_below="@+id/rl_goods_one_third"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_home_goods_two_third"
+                style="@style/text_home_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp" />
+
+            <ImageView
+                android:id="@+id/iv_goods_two_pic_third"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_home_goods_two_third"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_goods_two_money_third"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_goods_third_third"
+            android:layout_width="176dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/rl_goods_one_third"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_home_goods_third_third"
+                style="@style/text_home_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp" />
+
+            <ImageView
+                android:id="@+id/iv_goods_third_pic_third"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_home_goods_third_third"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_goods_third_money_third"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_goods_four_third"
+            android:layout_width="176dp"
+            android:layout_height="92dp"
+            android:layout_below="@+id/rl_goods_one_third"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/rl_goods_two_third"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_home_goods_four_third"
+                style="@style/text_home_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp" />
+
+            <ImageView
+                android:id="@+id/iv_goods_four_pic_third"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_home_goods_four_third"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_goods_four_money_third"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--中奖商品图片-->
+    <ImageView
+        android:id="@+id/img_gold_record"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp" />
+    <!--中奖商品名称-->
+    <TextView
+        android:id="@+id/tv_name_gold_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/y15"
+        android:layout_toRightOf="@+id/img_gold_record"
+        android:textColor="@color/tv_name_indent"
+        android:textSize="14sp" />
+    <!--中奖商品时间-->
+    <TextView
+        android:id="@+id/tv_time_gold_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name_gold_record"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/img_gold_record"
+        android:textColor="@color/tv_distance_indent"
+        android:textSize="12sp" />
+</RelativeLayout>

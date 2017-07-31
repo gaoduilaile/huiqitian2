@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/lin_open"
+        android:background="@drawable/bkg_address_et"
+        android:layout_width="333dp"
+        android:layout_height="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pop_ok_show"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:background="@drawable/bkg_address_et"
+            android:clickable="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_1fa2ee"
+            android:text="保存至相册" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pop_cancel_show"
+        android:layout_marginTop="21dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/bkg_address_et"
+        android:layout_height="55dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/color_1fa2ee"
+        android:text="取消" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+</LinearLayout>

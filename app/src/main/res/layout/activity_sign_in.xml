@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--顶部标题-->
+    <include layout="@layout/layout_title_back" />
+    <!---->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rl_sign_in_one"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@mipmap/bkg_sign_in"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_sign_in_o"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:background="@mipmap/bkg_sign_in">
+
+                    <TextView
+                        android:id="@+id/tv_sign_in"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:background="@mipmap/bkg_dao"
+                        android:gravity="center"
+                        android:text="@string/tv_sign_in"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <!--四个小圆点-->
+                    <TextView
+                        android:id="@+id/tv_ball_sign_in_one"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_alignTop="@+id/tv_sign_in"
+                        android:layout_marginLeft="90dp"
+                        android:background="@mipmap/bkg_sign_in_one" />
+
+                    <TextView
+                        android:id="@+id/tv_ball_sign_in_two"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_toRightOf="@+id/tv_sign_in"
+                        android:background="@mipmap/bkg_sign_in_two" />
+
+                    <TextView
+                        android:id="@+id/tv_ball_sign_in_three"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="56dp"
+                        android:layout_marginTop="128dp"
+                        android:background="@mipmap/bkg_sign_in_three" />
+
+                    <TextView
+                        android:id="@+id/tv_ball_sign_in_four"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="259dp"
+                        android:layout_marginTop="120dp"
+                        android:background="@mipmap/bkg_sign_in_four" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_in_nine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="42dp"
+                        android:text="@string/tv_sign_content"
+                        android:textColor="@color/color_title_text"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_sign_in_ten"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/tv_sign_in_nine"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11dp"
+                        android:background="@mipmap/bkg_sign_in_end"
+                        android:gravity="center"
+                        android:text="415"
+                        android:textColor="@color/color_title_text"
+                        android:textSize="23dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sign_in"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+                    <!--文字：今日签到可领-->
+                    <TextView
+                        android:id="@+id/tv_sign_in_eleven"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_sign_in_one"
+                        android:textColor="@color/text_popular"
+                        android:textSize="18sp" />
+                    <!--金币数量-->
+                    <TextView
+                        android:id="@+id/tv_sign_in_twelve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_menu_btm_select"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <!--文字：金币-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_sign_in_three"
+                        android:textColor="@color/text_popular"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_sign_in"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/tv_sign_in_four"
+                    android:textColor="@color/text_popular"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!--签到日期布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/color_f4f4f4"
+                android:orientation="horizontal">
+                <!--第一个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_one"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_one"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_gray_two"
+                        android:text="@string/tv_data_sign_in_one" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_one"
+                        style="@style/tv_time_sign_in"
+                        android:text="06.27" />
+                </LinearLayout>
+                <!--第二个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_two"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_two"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_red"
+                        android:text="@string/tv_data_sign_in_one" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_two"
+                        style="@style/tv_time_sign_in"
+                        android:text="今日" />
+                </LinearLayout>
+                <!--第三个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_three"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_three"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_gray_one"
+                        android:text="@string/tv_data_sign_in_one" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_three"
+                        style="@style/tv_time_sign_in"
+                        android:text="明日" />
+                </LinearLayout>
+                <!--第四个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_four"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_four"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_gray_one"
+                        android:text="@string/tv_data_sign_in_two" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_four"
+                        style="@style/tv_time_sign_in"
+                        android:text="06.27" />
+                </LinearLayout>
+                <!--第五个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_five"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_five"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_gray_one"
+                        android:text="@string/tv_data_sign_in_two" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_five"
+                        style="@style/tv_time_sign_in"
+                        android:text="06.27" />
+                </LinearLayout>
+                <!--第六个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_six"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_six"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_gray_one"
+                        android:text="@string/tv_data_sign_in_two" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_six"
+                        style="@style/tv_time_sign_in"
+                        android:text="06.27" />
+                </LinearLayout>
+                <!--第七个-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_sign_in_seven"
+                        style="@style/iv_sign_in" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_sign_in_seven"
+                        style="@style/tv_data_sign_in"
+                        android:background="@mipmap/bkg_data_sign_in_gray_one"
+                        android:text="@string/tv_data_sign_in_two" />
+
+                    <TextView
+                        android:id="@+id/tv_time_sign_in_seven"
+                        style="@style/tv_time_sign_in"
+                        android:text="06.27" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--我的金币明细-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:background="@mipmap/bkg_gold_sign_in"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@mipmap/img_gold" />
+
+                    <TextView
+                        android:id="@+id/tv_gold_num_sign_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="36dp"
+                        android:text="9999 "
+                        android:textColor="@color/text_popular"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_gold_detail_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/tv_gold_details_sign_in"
+                    android:textColor="@color/tv_distance_indent"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!--金币抽奖-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/bg_ly"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:text="@string/tv_gold_draw_sign_in"
+                android:textColor="@color/tv_distance_indent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <!--幸运大转盘-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical">
+                <!--大转盘图片-->
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="22dp"
+                    android:src="@mipmap/img_lucky_draw_sign_in" />
+                <!--大转盘抽奖介绍-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="9dp"
+                    android:text="@string/tv_text_sign_in"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <!--金币抽奖-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/bg_ly"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:text="@string/tv_record_sign_in"
+                android:textColor="@color/tv_distance_indent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <yunju.com.huiqitian.vm.widget.MyListView
+                android:id="@+id/mlv_record_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

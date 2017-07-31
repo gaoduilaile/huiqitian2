@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="16dp"
+              android:layout_marginRight="16dp"
+              android:background="@color/color_menu_btm_line"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="2016/5/2"
+        android:textColor="#999999"
+        android:textSize="24px"/>
+
+    <RelativeLayout
+        android:background="@drawable/bg_selector2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y81"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:clickable="false"
+            android:focusable="false"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="18dp"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <!--<ImageView-->
+            <!--android:clickable="false"-->
+            <!--android:focusable="false"-->
+            <!--android:id="@+id/iv_icon"-->
+            <!--android:layout_width="@dimen/x53"-->
+            <!--android:layout_height="@dimen/y37"-->
+            <!--android:layout_below="@id/tv_title"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginTop="16dp"/>-->
+
+        <TextView
+            android:id="@+id/tv_content_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="21dp"
+            android:ellipsize="end"
+            android:lines="3"
+            android:textColor="#999999"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

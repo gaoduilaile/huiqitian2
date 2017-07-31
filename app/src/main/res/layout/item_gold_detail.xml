@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/huise_point" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="54dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/color_dddddd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_gold_amount_gold_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+10"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/sign_content"
+            android:textColor="@color/tv_name_indent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time_gold_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            android:text="2016.07.05"/>
+    </LinearLayout>
+</LinearLayout>

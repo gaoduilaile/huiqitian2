@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_back" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/color_f5f5f5" />
+    <!-- 显示要添加的内容-->
+    <RelativeLayout style="@style/layout_address_item">
+
+        <TextView
+            style="@style/text_address_item"
+            android:text="联系人" />
+
+        <EditText
+            android:id="@+id/et_address_name"
+            style="@style/edit_address_item"
+
+            android:hint="你的姓名" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 显示用户的选择性别-->
+    <RelativeLayout style="@style/layout_address_item">
+        <!-- 男-->
+        <LinearLayout
+            android:id="@+id/ll_address_men"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_address_men"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@mipmap/weixuanzhong" />
+
+            <TextView
+                android:id="@+id/tv_address_men"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/address_sex_man"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <!-- 选择是男是女-->
+        <LinearLayout
+            android:id="@+id/ll_address_women"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="176dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_address_women"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@mipmap/weixuanzhong" />
+
+            <TextView
+                android:id="@+id/tv_address_women"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/address_sex_women"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 显示要添加的内容-->
+    <RelativeLayout style="@style/layout_address_item">
+
+        <TextView
+            style="@style/text_address_item"
+            android:text="@string/address_phone" />
+
+        <EditText
+            android:id="@+id/et_address_phone"
+            style="@style/edit_address_item"
+            android:hint="@string/address_mobile_phone"
+            android:inputType="number" />
+
+        <ImageView
+            android:id="@+id/iv_address_phone"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@mipmap/tianjia" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 显示要添加的内容-->
+    <RelativeLayout style="@style/layout_address_item">
+
+        <EditText
+            android:id="@+id/et_address_other_phone"
+            style="@style/edit_address_item"
+            android:hint="@string/address_unused_phone"
+            android:inputType="number" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 显示要添加的内容-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_city"
+        style="@style/layout_address_item">
+
+        <TextView
+            style="@style/text_address_item"
+            android:text="@string/city" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/edit_address_item"
+            android:gravity="center_vertical"
+            android:hint="@string/city_tv" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 显示要添加的内容-->
+    <RelativeLayout
+        android:id="@+id/rl_address"
+        style="@style/layout_address_item">
+
+        <TextView
+            style="@style/text_address_item"
+            android:text="@string/address_for_take_tv" />
+
+        <TextView
+            android:id="@+id/tv_address_item"
+            style="@style/edit_address_item"
+            android:gravity="center_vertical"
+            android:hint="@string/address_for_take" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/et_address_other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:hint="@string/address_detail"
+            android:textColor="@color/color_999999"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <!-- 确认添加-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5">
+
+        <TextView
+            android:id="@+id/tv_address_commit"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_register_selector"
+            android:gravity="center"
+            android:text="@string/address_sure"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/color_e51c24">
+
+        <ImageView
+            android:id="@+id/iv_address_back"
+            android:layout_width="23dp"
+            android:layout_height="27dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:src="@mipmap/back_two" />
+
+        <TextView
+            android:drawableRight="@drawable/btn_choose_city_normal"
+            android:id="@+id/tv_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="@string/choose_address_choose"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+<!--
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@+id/tv_address_title"
+            android:src="@mipmap/location" />-->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_address_find"
+                    android:layout_width="270dp"
+                    android:layout_height="29dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/bkg_address_et"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/iv_address_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/img_find"
+                    android:drawablePadding="11dp"
+                    android:text="@string/choose_address_input" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_address_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--滑动部分-->
+    <ScrollView
+        android:id="@+id/scrollview_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 滑动的一整块-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_eeeeee">
+
+                <TextView
+                    style="@style/text_address"
+                    android:text="@string/choose_address_now" />
+            </LinearLayout>
+            <!-- 当前地址-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_address_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:maxEms="18"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_address_location"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:src="@mipmap/icon_addr_dingwei" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_eeeeee">
+
+                <TextView
+                    style="@style/text_address"
+                    android:text="@string/address_mobile_near" />
+            </LinearLayout>
+            <!-- 地址一 -->
+            <LinearLayout
+                android:id="@+id/ly_address_one"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_address_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="14dp"
+                    android:maxEms="18"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginLeft="14dp"
+                android:background="@color/color_dddddd" />
+
+            <!-- 地址二-->
+            <LinearLayout
+                android:id="@+id/ly_address_two"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_address_my_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="14dp"
+                    android:maxEms="18"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginLeft="14dp"
+                android:background="@color/color_dddddd" />
+            <!-- 地址三-->
+            <LinearLayout
+                android:id="@+id/ly_address_three"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/tv_address_my_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="14dp"
+                    android:maxEms="18"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginLeft="14dp"
+                android:background="@color/color_dddddd" />
+            <!-- 更多地址-->
+            <RelativeLayout
+                android:id="@+id/rl_address_more"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:maxEms="18"
+                    android:text="@string/address_mobile_more"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_address_more"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="14dp"
+                    android:src="@mipmap/icon_my_right" />
+            </RelativeLayout>
+            <!-- 收货地址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_eeeeee">
+
+                <TextView
+                    style="@style/text_address"
+                    android:text="@string/address_mobile_take" />
+            </LinearLayout>
+            <!-- 个人收货地址-->
+            <yunju.com.huiqitian.vm.widget.MyListView
+                android:id="@+id/lv_address_take"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/tv_search_no_address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="没找到？搜搜附近的地址试试或者切换城市"
+        android:textSize="14sp"
+        android:background="@color/color_ffe5e5"
+        android:visibility="gone"/>
+    <ListView
+        android:id="@+id/lv_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</LinearLayout>
+
+

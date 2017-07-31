@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_right_class"
+        android:layout_width="120dp "
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/tv_distance_indent"/>
+    <yunju.com.huiqitian.vm.widget.MyGridView
+        android:numColumns="3"
+        android:id="@+id/gv_right_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="13dp"
+        GridLine="none"/>
+</LinearLayout>

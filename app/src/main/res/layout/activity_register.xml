@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--注册界面-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--输入手机号-->
+    <include layout="@layout/layout_title_back" />
+
+    <EditText
+        android:id="@+id/et_register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bkg_et_reg"
+        android:hint="@string/phone_activity_register"
+        android:textSize="16sp"
+        android:textColor="@color/et_phone_register"
+        android:paddingLeft="12dp"
+        android:inputType="number"/>
+
+    <!--短信验证-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="10dp">
+        <!--输入短信验证码-->
+        <EditText
+            android:id="@+id/et_register_code"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/bkg_et_reg"
+            android:hint="@string/message_activity_register"
+            android:textSize="16sp"
+            android:textColor="@color/et_phone_register"
+            android:paddingLeft="12dp"
+            android:inputType="number"/>
+        <!--获取短信验证码-->
+        <Button
+            android:id="@+id/btn_register_get_code"
+            android:layout_toRightOf="@+id/et_register_code"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bkg_register_code"
+            android:text="@string/getcode_activity_register"
+            android:textColor="@color/btn_getMessage_register"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    <!--点击进入下一页-->
+    <Button
+        android:id="@+id/btn_register_next"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bkg_et_reg"
+
+        android:text="@string/next_activity_register"
+        android:textSize="16dp"
+
+        android:textColor="@color/color_login_ftpsd"/>
+
+    <TextView
+        android:id="@+id/tv_agreement"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/text_activity_register"
+        android:textColor="@color/tv_provision_register"
+        android:textSize="14dp" />
+
+</LinearLayout>

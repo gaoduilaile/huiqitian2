@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+   >
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_title_back" />
+
+    <!-- 上拉加载下拉刷新-->
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include">
+
+        <include
+            android:id="@+id/refresh_head_details"
+            layout="@layout/refresh_head" />
+
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:id="@+id/scrollview_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/ll_scrollView_son"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_title_over_evaluate"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_evaluate0"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/tv_all_evaluate"
+                            android:textColor="#333333"
+                            android:textSize="14sp"   />
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:id="@+id/tv_all_evaluate_total0"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_evaluate0"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_title_good_evaluate"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_evaluate1"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/tv_good_evaluate"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:id="@+id/tv_all_evaluate_total1"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_evaluate1"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_title_centre_evaluate"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_evaluate2"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/tv_medium_evaluate"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:id="@+id/tv_all_evaluate_total2"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_evaluate2"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="0" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_title_differ_evaluate"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_evaluate3"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/tv_bad_evaluate"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:id="@+id/tv_all_evaluate_total3"
+                            android:layout_width="68dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_evaluate3"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="0" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y1"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/color_title_line" />
+                <!-- 云标签-->
+                <yunju.com.huiqitian.vm.widget.TagCloudView
+                    android:id="@+id/normalTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ly_user_evaluate"
+                    app:tcvBackground="@drawable/tag_background_red"
+                    app:tcvBorder="20dp"
+                    app:tcvCanTagClick="true"
+                    app:tcvItemBorderHorizontal="20dp"
+                    app:tcvItemBorderVertical="15dp"
+                    app:tcvSingleLine="false"
+                    app:tcvTextColor="@color/color_333333"
+                    app:tcvTextSize="6sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp"
+                    android:background="@color/color_title_line" />
+
+                <yunju.com.huiqitian.vm.widget.MyListView
+                    android:id="@+id/lv_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_line"
+                    android:layout_marginTop="5dp"
+                    android:descendantFocusability="blocksDescendants"
+                    android:dividerHeight="1dp"/>
+                <TextView
+                    android:id="@+id/tv_no_eval"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/tv_evaluate"
+                    android:textSize="22sp"
+                    android:visibility="gone"
+                    android:textColor="@color/color_999999"/>
+                <!--<ListView-->
+                <!--android:id="@+id/lv_detail_evaluate"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--</ListView>-->
+            </LinearLayout>
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+        <include layout="@layout/load_more" />
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--头部标题-->
+    <include
+        android:id="@+id/ic_title_evaluate"
+        layout="@layout/layout_title_back" />
+
+    <!--评价标题-->
+    <LinearLayout
+        android:id="@+id/ll_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ic_title_evaluate"
+        android:orientation="horizontal">
+        <!--全部评价-->
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:singleLine="false"
+            android:text="@string/tv_all_evaluate" />
+        <!--好评-->
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:singleLine="false"
+            android:text="@string/tv_good_evaluate" />
+        <!--中评-->
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:maxEms="4"
+            android:singleLine="false"
+            android:text="@string/tv_medium_evaluate" />
+        <!--差评-->
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="10dp"
+            android:maxEms="4"
+            android:singleLine="false"
+            android:text="@string/tv_bad_evaluate" />
+    </LinearLayout>
+    <!--线-->
+    <View
+        android:id="@+id/line_one_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_below="@+id/ll_evaluate"
+        android:background="@color/line" />
+
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_one_evaluate"
+        android:layout_above="@+id/bottom_evaluate">
+
+        <!--下拉刷新-->
+        <include
+            android:id="@+id/refresh_head_evaluate"
+            layout="@layout/refresh_head" />
+
+        <!--自定义ScrollView-->
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:id="@+id/scrollview_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--显示评价的GridView-->
+                <GridView
+                    android:id="@+id/gv_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="18dp"
+                    android:numColumns="3"/>
+                <!--中间间隔-->
+                <View
+                    android:id="@+id/line_two_evaluate"
+                    android:layout_below="@+id/gv_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp"
+                    android:background="@color/line"/>
+                <!--显示用户评价内容的ListView-->
+                <ListView
+                    android:id="@+id/lv_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/y150"
+                    android:layout_below="@+id/line_two_evaluate"/>
+
+            </RelativeLayout>
+
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+        <!--上拉加载-->
+        <include layout="@layout/load_more" />
+
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+
+    <!--底部导航-->
+    <include
+        android:id="@+id/bottom_evaluate"
+        layout="@layout/item_bottom"/>
+</RelativeLayout>

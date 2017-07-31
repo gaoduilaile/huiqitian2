@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--  密码重置  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/bkg_register_edit"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_reset_psd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color_login_et"
+                android:hint="@string/str_resetpsd_first"
+                android:paddingLeft="12dp" />
+
+            <ImageView
+                android:id="@+id/png_reset_psd"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="14dp"
+                android:src="@mipmap/img_show_psd" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bkg_register_edit"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_reset_psd_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color_login_et"
+                android:hint="@string/str_resetpsd_again"
+                android:paddingLeft="12dp" />
+
+            <ImageView
+                android:id="@+id/png_reset_psd_again"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="14dp"
+                android:src="@mipmap/img_closed_psd" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_register_selector"
+        android:text="@string/str_resetpsd_btn"
+        android:textColor="@color/color_login_btn"
+        android:textSize="16sp" />
+
+</LinearLayout>

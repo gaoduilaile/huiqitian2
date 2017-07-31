@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 顶部标题-->
+    <include layout="@layout/layout_title_back" />
+
+    <!-- 修改个人头像-->
+    <RelativeLayout
+        android:id="@+id/rl_person_head_change"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical">
+
+        <!-- 头像-->
+        <!--<de.hdodenhof.circleimageview.CircleImageView
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_person_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/icon_head"
+            app:sriv_oval="true" />-->
+        <ImageView
+            android:id="@+id/iv_person_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/dimen_6"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/icon_head" />
+
+        <!-- 改变头像-->
+        <TextView
+            style="@style/text_right_show"
+            android:text="@string/person_head_change" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 昵称-->
+    <RelativeLayout
+        android:id="@+id/rl_person_nickname"
+        style="@style/layout_person_msg"
+        android:onClick="changeClick">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/person_nickname" />
+
+        <TextView
+            android:id="@+id/tv_person_nickname"
+            style="@style/text_right_show" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 性别-->
+    <RelativeLayout
+        android:id="@+id/rl_person_sex"
+        style="@style/layout_person_msg">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/person_sex" />
+
+        <TextView
+            android:id="@+id/tv_person_sex"
+            style="@style/text_right_show" />
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 账号-->
+    <RelativeLayout
+        android:id="@+id/rl_person_account"
+        style="@style/layout_person_msg"
+        android:onClick="changeClick">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/person_account" />
+        <TextView
+        android:id="@+id/tv_person_account"
+        style="@style/text_right_show" />
+
+    </RelativeLayout>
+
+    <View style="@style/view_line" />
+
+    <!-- 绑定手机号-->
+    <RelativeLayout
+        android:id="@+id/rl_person_bind_phone"
+        style="@style/layout_person_msg"
+        android:onClick="changeClick">
+
+        <TextView
+            style="@style/text_left_show"
+            android:text="@string/person_bind_phone" />
+
+        <TextView
+            android:id="@+id/tv_person_bind_phone"
+            style="@style/text_right_show" />
+    </RelativeLayout>
+
+    <!-- 这是下面布局显示颜色-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5" />
+
+</LinearLayout>

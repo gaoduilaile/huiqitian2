@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <!-- 标题  ： 每日精选-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/color_f5f5f5"
+        android:gravity="center">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_fdae47" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:text="销量爆款"
+            android:textColor="@color/color_fdae47"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_fdae47" />
+    </LinearLayout>
+
+    <yunju.com.huiqitian.vm.widget.MyGridView
+        android:id="@+id/gv_sales_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_f5f5f5"
+        android:verticalSpacing="@dimen/dimen_3"
+        android:horizontalSpacing="@dimen/dimen_3"
+        android:stretchMode="columnWidth"
+        android:numColumns="2"/>
+
+</LinearLayout>

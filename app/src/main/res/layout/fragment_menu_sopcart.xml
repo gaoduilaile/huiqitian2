@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_scl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--购物车头部-->
+    <!--之后修改购物车的布局  因：订单拆分，一次付款失败二次付款有问题-->
+    <!--<RelativeLayout
+        android:id="@+id/rl_cart_title"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购物车"
+                android:textColor="@color/color_title_text"
+                android:textSize="18sp" />
+
+            &lt;!&ndash;购物车头部显示的数量&ndash;&gt;
+            <TextView
+                android:id="@+id/tv_cart_title_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_title_text"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_cart_all_edit"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/color_title_text"
+            android:textSize="16sp" />
+
+        &lt;!&ndash;</LinearLayout>&ndash;&gt;
+
+
+    </RelativeLayout>
+
+    &lt;!&ndash;头部下面的分割线&ndash;&gt;
+    <View
+        android:id="@+id/v_cart_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_below="@+id/rl_cart_title"
+        android:background="@color/color_title_line" />
+
+    &lt;!&ndash;之前购物车的布局（已隐藏）&ndash;&gt;
+    <ListView
+        android:id="@+id/lv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_cart_btm_line"
+        android:layout_below="@+id/v_cart_top_line"
+        android:divider="@android:color/white"
+        android:dividerHeight="@dimen/dimen_3"
+        android:visibility="gone"/>-->
+
+    <!--因订单问题修改购物车。。。。。头部修改-->
+    <RelativeLayout
+        android:id="@+id/rl_cart_title"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_shop_title_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="购物车"
+                android:layout_marginLeft="150dp"
+                android:textColor="@color/color_title_text"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+
+            <!--<TextView
+                android:id="@+id/tv_market_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="超市名称。。。"
+                android:textColor="@color/color_title_text"
+                android:textSize="18sp" />-->
+            <!--购物车头部显示的数量-->
+            <TextView
+                android:id="@+id/tv_cart_title_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_title_text"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cart_all_edit"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/color_title_text"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--头部下面的分割线-->
+    <View
+        android:id="@+id/v_cart_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_below="@+id/rl_cart_title"
+        android:background="@color/color_title_line" />
+
+    <ListView
+        android:id="@+id/lv_cart_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view_cart_btm_line"
+        android:layout_below="@+id/v_cart_top_line"
+        android:divider="@android:color/white"
+        android:dividerHeight="@dimen/dimen_3" />
+
+    <!--底部上方的分割线-->
+    <View
+        android:id="@+id/view_cart_btm_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_above="@+id/rl_cart_btm"
+        android:background="@color/color_title_line" />
+
+    <!--购物车底部结算或删除布局-->
+    <RelativeLayout
+        android:id="@+id/rl_cart_btm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:layout_alignParentBottom="true">
+
+        <!--底部结算的布局-->
+        <RelativeLayout
+            android:id="@+id/rl_cart_btm_settle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <!--全选-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x12"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_cart_settle_allChoose"
+                    android:layout_width="@dimen/dimen_18"
+                    android:layout_height="@dimen/dimen_18"
+                    android:background="@drawable/checkbox_style"
+                    android:button="@null"
+                    android:checked="false"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/x13"
+                    android:text="全选"
+                    android:textColor="@color/color_title_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--合计-->
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_marginTop="@dimen/y4"
+                android:layout_toLeftOf="@+id/ll_settle">
+
+                <TextView
+                    android:id="@+id/tv_cart_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计:"
+                    android:textColor="@color/color_title_text"
+                    android:textSize="14sp" />
+
+                <!--合计后面的金额数-->
+                <LinearLayout
+                    android:id="@+id/ll_cart_total_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_cart_total"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥"
+                        android:textColor="@color/color_menu_btm_select"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cart_big_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/color_menu_btm_select"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cart_small_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=".00"
+                        android:textColor="@color/color_menu_btm_select"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_cart_total_num"
+                    android:layout_marginTop="@dimen/y3"
+                    android:layout_toRightOf="@+id/tv_cart_total"
+                    android:text="不含配送费"
+                    android:textColor="@color/tv_distance_indent"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <!--去结算按钮-->
+            <LinearLayout
+                android:id="@+id/ll_settle"
+                android:layout_width="@dimen/x97"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_menu_btm_select"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="去结算"
+                    android:textColor="@color/color_login_btn"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:textColor="@color/color_login_btn"
+                    android:textSize="12sp" />
+
+                <!--去结算的数量-->
+                <TextView
+                    android:id="@+id/tv_cart_settle_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/color_login_btn"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:textColor="@color/color_login_btn"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--底部删除的布局-->
+        <RelativeLayout
+            android:id="@+id/rl_cart_btm_del"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <!--全选-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x12"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_cart_del_allChoose"
+                    android:layout_width="@dimen/dimen_18"
+                    android:layout_height="@dimen/dimen_18"
+                    android:background="@drawable/checkbox_style"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x12"
+                    android:text="全选"
+                    android:textColor="@color/color_title_text"
+                    android:textSize="@dimen/x12" />
+            </LinearLayout>
+
+            <!--移入收藏夹-->
+            <TextView
+                android:id="@+id/tv_cart_move_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x12"
+                android:layout_toLeftOf="@+id/tv_cart_btm_del"
+                android:text="移入收藏夹"
+                android:textColor="@color/color_menu_btm_select"
+                android:textSize="14sp" />
+
+            <!--删除按钮-->
+            <TextView
+                android:id="@+id/tv_cart_btm_del"
+                android:layout_width="@dimen/x107"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/color_menu_btm_select"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/color_login_btn"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/v_cart_top_line"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/tv_sp_cart"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/y16"
+            android:layout_marginBottom="@dimen/y5"
+            android:layout_marginLeft="@dimen/x45"
+            android:src="@mipmap/img_menu_spcart" />
+
+        <TextView
+            android:id="@+id/tv_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sp_cart"
+            android:text="    购物车还是空的\n去挑选中意的商品吧"
+            android:textSize="@dimen/dimen_15" />
+
+        <Button
+            android:id="@+id/btn_toClassFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_textView"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginTop="@dimen/y5"
+            android:text="去逛逛"
+            android:textSize="@dimen/dimen_15" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_no_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/v_cart_top_line"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 未登陆,点这里登陆"
+            android:textSize="@dimen/dimen_15" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

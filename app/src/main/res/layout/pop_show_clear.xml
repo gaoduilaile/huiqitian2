@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_open"
+        android:background="@drawable/bkg_address_et"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_introduce_clear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/et_phone_register"
+            android:text="@string/pop_show_introduce_clear"
+            android:textSize="12sp"/>
+
+        <View
+            android:background="@color/color_dddddd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"/>
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/btn_getMessage_register"
+            android:text="@string/pop_show_clear"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F2F2F2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pop_cancel_clear"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/bkg_address_et"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/pop_sex_color"
+        android:text="@string/pop_show_cancel"
+        android:textSize="18sp"/>
+
+</LinearLayout>

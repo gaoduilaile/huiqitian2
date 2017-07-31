@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- title-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ly_shop_goods_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="14dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/image_back" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_shop_goods_find"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bkg_find_search"
+            android:drawableLeft="@mipmap/img_find"
+            android:drawablePadding="11dp"
+            android:hint="@string/shop_goods_search"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="11dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/tv_shop_goods_search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:gravity="center"
+                android:text="@string/str_find_search"
+                android:textColor="@color/find_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 店铺图片-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:background="@mipmap/bkg_shop_goods_title">
+
+        <com.joooonho.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_shop_goods_head"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon_head"
+            app:sriv_oval="true" />
+
+        <TextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/iv_shop_goods_head"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_shop_distance_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shop_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_shop_goods_head"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_shop_goods_collect"
+            android:layout_width="68dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tv_shop_name"
+            android:layout_marginRight="14dp"
+            android:background="@mipmap/bkg_shop_goods_shoucang"
+            android:drawableLeft="@mipmap/icon_shop_goods_shoucang"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="收藏"
+            android:textColor="@android:color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_shop_collect_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_shop_goods_collect"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.3"
+            android:textColor="@color/color_ffffff"
+            android:textSize="10dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <!-- 上拉加载下拉刷新-->
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:id="@+id/al_menu_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_line">
+        <!-- 头布局-->
+        <include
+            android:id="@+id/refresh_head_details"
+            layout="@layout/refresh_head" />
+        <!--&lt;!&ndash; 可以滑动的菜单选项&ndash;&gt;-->
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/v_line"
+                android:background="@color/color_f5f5f5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <!-- 热卖商品-->
+                    <TextView
+                        android:id="@+id/tv_shop_hot_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:padding="5dp"
+                        android:text="@string/sales_hot"
+                        android:textColor="@color/color_333333"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                    <yunju.com.huiqitian.vm.widget.MyGridView
+                        android:id="@+id/gv_shop_hot_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="5dp" />
+                    <!-- 今日上新-->
+                    <TextView
+                        android:id="@+id/tv_shop_new_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:padding="5dp"
+                        android:text="@string/new_goods_today"
+                        android:textColor="@color/color_333333"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                    <yunju.com.huiqitian.vm.widget.MyGridView
+                        android:id="@+id/gv_shop_new_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="5dp" />
+
+                    <!-- 今日上新-->
+                    <TextView
+                        android:id="@+id/tv_shop_suggest_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="14dp"
+                        android:padding="5dp"
+                        android:text="@string/goods_recommend_for_you"
+                        android:textColor="@color/color_333333"
+                        android:textSize="20sp"
+                        android:visibility="gone" />
+
+                    <yunju.com.huiqitian.vm.widget.MyGridView
+                        android:id="@+id/gv_shop_suggest_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:horizontalSpacing="2dp"
+                        android:numColumns="2"
+                        android:verticalSpacing="5dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+        <!-- 尾布局-->
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+</LinearLayout>

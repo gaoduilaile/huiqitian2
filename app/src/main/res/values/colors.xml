@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--登录界面-->
+    <color name="color_title_text">#333333</color>
+    <color name="color_title_line">#dddddd</color>
+    <color name="color_login_btn">#ffffff</color>
+    <color name="color_login_et">#E3E3E3</color>
+    <color name="color_login_ftpsd">#555555</color>
+    <!--分类页面-->
+    <color name="color_text_title">#ff00</color>
+    <color name="color_text_src">#dddddd</color>
+    <color name="color_back">#000000</color>
+
+
+    <!--注册界面-->
+    <color name="tv_provision_register">#1fa2ee</color>
+    <color name="et_phone_register">#999999</color>
+    <color name="btn_getMessage_register">#e51c23</color>
+
+    <!--重置密码-->
+    <color name="et_resetpsd_fist">#999999</color>
+
+    <color name="next_activity_register">#1fa2ee</color>
+    <color name="color_858585">#858585</color>
+    
+    <!--menu界面-->
+    <color name="color_menu_btm_default">#666666</color>
+    <color name="color_menu_btm_select">#e51c23</color>
+    <color name="color_f63469">#f63469</color>
+    <color name="color_fc49f2">#5c49f2</color>
+    <color name="color_fdae47">#fdae47</color>
+
+    <!-- 云标签-->
+    <color name="tagCloud">#dddddd</color><!-- 标签背景 -->
+    <color name="transparency">#00000000</color><!-- 透明色 -->
+    <color name="color_menu_btm_line">#dddddd</color>
+
+    <!-- 欢迎界面-->
+    <color name="welcome_text">#ffffff</color>
+    
+    <!--商品详情页面-->
+    <color name="bg_add_shopping">#f27a39</color>
+    <color name="bg_buy">#e51c23</color>
+    <color name="text_add_shopping">#ffffff</color>
+    <color name="text_popular">#333333</color>
+    <color name="line">#dddddd</color>
+    <color name="point">#f36128</color>
+    <color name="bg_ly">#f5f5f5</color>
+    <color name="tv_number">#e51c23</color>
+    
+    <!--确认订单界面-->
+    <color name="bg_layout_indent">#eeeeee</color>
+    <color name="tv_name_indent">#333333</color>
+    <color name="bg_default_indent">#f23134</color>
+    <color name="btn_default_indent">#ffffff</color>
+    <color name="tv_distance_indent">#999999</color>
+    <color name="btn_commit_indent">#e51c23</color>
+
+
+    <!-- 搜索界面-->
+    <color name="find_text">#e51c23</color>
+
+    <!--刷新加载-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="light_blue">#6593cb</color>
+
+    <!-- 自动清除EditText-->
+    <color name="et_clear_gray">#a9b7b7</color>
+
+    <!-- popWindow相关颜色-->
+    <color name="pop_sex_color">#1fa2ee</color>
+
+    <!-- 退出账号-->
+    <color name="tv_exist_account">#e51e23</color>
+
+    <color name="color_f8f8f8">#f8f8f8</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_3eb8fb">#3eb8fb</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_dddddd">#dddddd</color>
+    <color name="color_e51c24">#e51c24</color>
+    <color name="color_e51c23">#e51c23</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_fa6d25">#fa6d25</color>
+    <color name="color_ff2e9b">#ff2e9b</color>
+    <color name="color_1fa2ee">#1fa2ee</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_ffe5e5">#ffe5e5</color>
+    <color name="color_f0be50">#f0be50</color>
+
+    <!--签到页面-->
+    <color name="color_f4f4f4">#f4f4f4</color>
+    <color name="color_cccccc">#cccccc</color>
+
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_my_address_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_my_address_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_my_address_name"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_my_address_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tv_my_address_sex"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_my_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_my_address_name"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp" />
+
+    <View
+        style="@style/view_line"
+        android:layout_below="@+id/tv_my_address"
+        android:layout_marginTop="14dp" />
+</RelativeLayout>

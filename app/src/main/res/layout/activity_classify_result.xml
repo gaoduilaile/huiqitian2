@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/iv_find_back"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/image_back" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_classify_title"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/iv_find_search"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:visibility="invisible"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/img_find_result_cart" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/color_title_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 销量-->
+        <LinearLayout
+            android:id="@+id/ly_result_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6sp"
+                android:gravity="center"
+                android:text="@string/str_find_result_num"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6sp"
+                android:src="@mipmap/img_find_red_down" />
+        </LinearLayout>
+
+        <!-- 配送-->
+        <LinearLayout
+            android:id="@+id/ly_result_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="口碑"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6sp"
+                android:src="@mipmap/img_find_default_down" />
+        </LinearLayout>
+
+        <!--评价 -->
+        <LinearLayout
+            android:id="@+id/ly_result_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="价格"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6sp"
+                android:src="@mipmap/img_find_default_down" />
+        </LinearLayout>
+
+        <!-- 最新-->
+        <LinearLayout
+            android:id="@+id/ly_result_money"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_result_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="最新"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_result_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6sp"
+                android:src="@mipmap/img_find_default_down" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_title_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/huiqitian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="附近无超市，暂无数据！"
+                android:textColor="@color/color_999999"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!--下拉刷新-->
+        <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+            android:id="@+id/pull_refresh_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_head" />
+
+            <yunju.com.huiqitian.vm.widget.PullableScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <yunju.com.huiqitian.vm.widget.MyGridView
+                    android:id="@+id/pv_find_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_f5f5f5"
+                    android:divider="@color/tagCloud"
+                    android:horizontalSpacing="@dimen/dimen_3"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/dimen_3" />
+            </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+            <include layout="@layout/load_more" />
+
+        </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

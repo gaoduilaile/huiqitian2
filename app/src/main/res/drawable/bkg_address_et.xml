@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 设置透明背景色 -->
+    <solid android:color="@android:color/white" />
+    <!--调节边角-->
+    <corners
+        android:topLeftRadius="@dimen/x3"
+        android:topRightRadius="@dimen/x3"
+        android:bottomLeftRadius="@dimen/x3"
+        android:bottomRightRadius="@dimen/x3"
+        />
+    <!-- 设置一下边距,让空间大一点 -->
+    <padding
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp" />
+
+</shape>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 标题  ： 每日精选-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/color_f5f5f5"
+        android:gravity="center">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_fc49f2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:text="猜你喜欢"
+            android:textColor="@color/color_fc49f2"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_fc49f2" />
+    </LinearLayout>
+    <!--显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_f5f5f5"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_like_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_like_name_one"
+                style="@style/text_home_name"
+                android:layout_below="@+id/iv_like_pic_one"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:id="@+id/iv_like_pic_one"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_like_name_one"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/y2"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_home_like_money_one"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_like_two"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_like_name_two"
+                style="@style/text_home_name"
+                android:layout_below="@+id/iv_like_pic_two"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:id="@+id/iv_like_pic_two"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_like_name_two"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/y2"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_home_like_money_two"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_like_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tv_like_name_three"
+                style="@style/text_home_name"
+                android:layout_below="@+id/iv_like_pic_three"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:id="@+id/iv_like_pic_three"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_like_name_three"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="@dimen/y2"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_home_like_money_three"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_f5f5f5"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dimen_3"
+            android:id="@+id/rl_like_four"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:maxEms="6"
+                android:id="@+id/tv_like_name_four"
+                style="@style/text_home_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_like_name_four"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_home_like_money_four"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_like_pic_four"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dimen_3"
+            android:id="@+id/rl_like_five"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="120dp"
+            android:layout_marginLeft="@dimen/dimen_3"
+            android:background="@android:color/white">
+
+            <TextView
+                android:maxEms="6"
+                android:id="@+id/tv_like_name_five"
+                style="@style/text_home_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="29dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_like_name_five"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <TextView style="@style/text_home_money_icon" />
+
+                <TextView
+                    android:id="@+id/tv_home_like_money_five"
+                    style="@style/text_home_money"
+                    android:layout_marginLeft="@dimen/dimen_2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_like_pic_five"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="4dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_first" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

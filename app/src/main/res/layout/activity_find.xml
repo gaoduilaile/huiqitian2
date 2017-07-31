@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/iv_find_back"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/image_back" />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/et_find_content"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bkg_find_search"
+            android:drawableLeft="@mipmap/img_find"
+            android:drawablePadding="11dp"
+            android:hint="@string/str_find_hint"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/tv_find_search"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_find_search"
+                android:textColor="@color/find_text"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="#aaa" />
+
+    <LinearLayout
+        android:id="@+id/ly_find_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:text="@string/str_find_near_search"
+            android:textColor="#555"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_find_delete"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="14dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/img_find_delete" />
+    </LinearLayout>
+
+    <!-- 云标签-->
+    <yunju.com.huiqitian.vm.widget.TagCloudView
+        android:id="@+id/normalTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:tcvBackground="@drawable/bkg_cloud_tag"
+        app:tcvBorder="6dp"
+        app:tcvCanTagClick="true"
+        app:tcvItemBorderHorizontal="14dp"
+        app:tcvItemBorderVertical="14dp"
+        app:tcvSingleLine="false"
+        app:tcvTextColor="@color/color_menu_btm_default"
+        app:tcvTextSize="6sp" />
+
+</LinearLayout>
+

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_home_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_menu_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/iv_menu_top_msg"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_selector"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/img_home_msg"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_message_oval"
+                android:layout_width="10dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_oval_message"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_menu_top_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/img_home_address"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxEms="11"
+            android:singleLine="true"
+            android:text="@string/location_loading"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/iv_menu_top_search"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_selector"
+            android:gravity="center">
+            <!--搜索-->
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/img_home_search" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_below="@+id/rl_menu_top"
+        android:background="@color/color_title_line" />
+
+    <!-- 上拉加载下拉刷新-->
+    <yunju.com.huiqitian.vm.widget.PullToRefreshLayout
+        android:id="@+id/rl_menu_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/v_line">
+        <!-- 头布局-->
+        <include
+            android:id="@+id/refresh_head_details"
+            layout="@layout/refresh_head" />
+
+        <!--&lt;!&ndash; 可以滑动的菜单选项&ndash;&gt;-->
+        <yunju.com.huiqitian.vm.widget.PullableScrollView
+            android:id="@+id/sl_home_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y1">
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/v_line"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_no_network"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="230dp"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/no_network"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/no_network"/>
+                    <Button
+                        android:id="@+id/btn_reload"
+                        android:layout_width="125dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_marginTop="18dp"
+                        android:textColor="@color/color_e51c24"
+                        android:background="@mipmap/btn_bkg"
+                        android:text="@string/load_again"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ll_menu_home"
+                    android:orientation="vertical">
+                    <!-- 轮播图-->
+                    <include layout="@layout/fragment_banner" />
+                    <!-- 中间菜单-->
+                    <include layout="@layout/items_home_center_menu"
+                        android:id="@+id/menu"/>
+                    <!-- 每日精选-->
+                    <include
+                        android:id="@+id/ll_everyday_selection_menu_home"
+                        layout="@layout/items_home_content_menu" />
+                    <!-- 超值搭配-->
+                    <!--<include layout="@layout/items_home_content_match"/>-->
+                    <!-- 精选推荐-->
+                    <!--<include layout="@layout/items_home_selection_menu" />-->
+                    <!--猜你喜欢-->
+                    <include
+                        android:id="@+id/ll_like__menu_home"
+                        layout="@layout/item_home_like_menu" />
+                    <!--进口零食-->
+                    <include
+                        android:id="@+id/import_goods_menu_home"
+                        layout="@layout/item_home_imported_menu" />
+                    <!--销量爆款-->
+                    <include
+                        android:id="@+id/hot_sale_menu_home"
+                        layout="@layout/item_home_sales_menu" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </yunju.com.huiqitian.vm.widget.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+        <!-- 尾布局-->
+    </yunju.com.huiqitian.vm.widget.PullToRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_apply_market"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginLeft="25dp"
+        android:background="@color/white"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_content"
+            android:textSize="14sp"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:paddingRight="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_content_opinion"
+            android:paddingLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+            android:paddingRight="25dp"/>
+
+        <Button
+            android:id="@+id/btn_apply_market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:background="@mipmap/bg_frame"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_e51c23"
+            android:text="@string/apply_shop"/>
+    </LinearLayout>
+</LinearLayout>
